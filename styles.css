@@ -1,0 +1,470 @@
+* {
+    margin: 0 auto;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+
+/* Main Header */
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    padding: 1rem;
+}
+
+.main-nav {
+    width: 35%;
+}
+
+.main-nav__items {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-header__brand img {
+    margin-left: -32px;
+}
+
+.main-header__brand .brand__name {
+    color: #FFF;
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+.main-header__brand .brand__lastname {
+    color: #FFF;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.main-nav__item a {
+    color: #FFF;
+    font-family: Gotham;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+
+.main-nav__item a:hover,
+.main-nav__item a:active {
+    border-bottom: 4px solid #51ac6b;
+}
+
+.main-header__cta {
+    border: 1px solid #51ac6b;
+    border-radius: 3px;
+    background-color: transparent;
+    color: #51ac6b;
+    font-size: 0.75rem;
+    padding: 8px 24px;
+    vertical-align: middle;
+    cursor: pointer;
+    font-family: Gotham;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.main-header__cta:hover {
+    border: 1px solid #FFF;
+    background-color: hsla(137, 36%, 50%, 0.7);
+    ;
+    color: #FFF;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.main-header i {
+    display: none;
+    color: #FFF;
+    font-size: 1.5rem;
+}
+
+.mobile-nav {
+    width: 100%;
+    display: none;
+}
+
+.sticky {
+    background-color: #000;
+}
+
+.mobile-nav ul {
+    padding: 0;
+}
+
+.moibile-nav__items {
+    display: inline-block;
+    width: 100%;
+}
+
+.mobile-nav__items li {
+    display: block;
+    text-align: center;
+    width: 80%;
+    padding: 1rem 0;
+    border-bottom: 0.25px solid rgba(255, 255, 255, 0.3);
+}
+
+.mobile-nav__item a {
+    color: #FFF;
+    text-decoration: none;
+    font-family: Gotham;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+
+.mobile-nav__item a:hover,
+.mobile-nav__item a:active {
+    border-bottom: none;
+}
+
+.mobile-nav__items li:hover,
+.mobile-nav__items li:active {
+    border-bottom: 3px solid hsla(137, 36%, 50%, 0.6);
+    cursor: pointer;
+}
+
+.main-header .main-header__mobile-cta {
+    border: 2px solid #51ac6b;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #51ac6b;
+    font-family: Gotham;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 5px 16px;
+    vertical-align: middle;
+    cursor: pointer;
+    width: 80%;
+    margin: 2rem 10%;
+    align-self: center;
+    display: none;
+}
+
+.main-header__mobile-cta:hover {
+    border: 1px solid #FFF;
+    background-color: hsla(137, 36%, 50%, 0.7);
+    ;
+    color: #FFF;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+/* Cover Section */
+
+.cover {
+    color: white;
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)), url(./assets/mian-header-background.jfif);
+    filter: grayscale(100%);
+    background-size: cover;
+    background-position: center bottom;
+}
+
+@font-face {
+    font-family: GoldenPlains;
+    src: url(./assets/golden-plains.ttf)
+}
+
+@font-face {
+    font-family: Gotham;
+    src: url(./assets/gotham-thin.otf)
+}
+
+.cover__text {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.cover__pretitle {
+    font-family: GoldenPlains;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.cover__title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 72px;
+}
+
+.cover__subtitle {
+    font-family: Gotham;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+
+/* Slider */
+
+.card {
+    position: relative;
+}
+
+.slick-track {
+    margin-left: -25px !important;
+}
+
+.slick-slide img {
+    margin-right: 0 auto;
+    max-width: 100px;
+    vertical-align: middle;
+}
+
+.item {
+    padding: 15px;
+    outline: none;
+}
+
+.slick-list.draggable {
+    margin: 0 auto;
+    align-self: center;
+}
+
+.item-inner {
+    background: #FFF;
+    height: 100px;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 100%;
+    padding: 2rem;
+}
+
+.item-inner .quote-container__quote {
+    font-size: 0.75rem;
+    text-align: justify;
+    font-weight: 600;
+    font-family: Gotham;
+    line-height: 24px;
+    font-style: italic;
+}
+
+.item-inner .quote-container__quotee {
+    font-size: 0.8rem;
+    font-family: Gotham;
+    font-weight: 900;
+    line-height: 36px;
+    margin: 0;
+}
+
+.social {
+    margin-top: 50px;
+}
+
+.social a {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    background-color: #FFF;
+    color: #ff6c00;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 20px;
+    margin: 0 5px;
+    transition: all ease 0.5s;
+}
+
+.social a:hover {
+    transform: translateY(-10px);
+}
+
+.slick-slide {
+    transform: scale(0.8);
+    opacity: 0.3;
+    transition: all ease 0.5s;
+    width: 50vw;
+    box-sizing: border-box;
+}
+
+.slick-slide.slick-current {
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+/* SLIDER-CONTROLS */
+
+
+/* .slick-arrow {
+    position: absolute !important;
+    top: 300px !important;
+    z-index: 150 !important;
+    background: yellow !important;
+    border: 1px solid #ff6c00 !important;
+    padding: 8px 15px !important;
+    border-radius: 50px !important;
+    width: 100px !important;
+    outline: none !important;
+} */
+
+.slick-next {
+    top: 100px !important;
+    left: 1% !important;
+}
+
+.slick-prev {
+    top: 100px !important;
+    left: 48% !important;
+}
+
+.slick-next:before,
+.slick-prev:before {
+    color: #000 !important;
+}
+
+.slick-list {
+    position: absolute;
+    top: -90px;
+    left: 0;
+}
+
+
+/* About Section */
+
+.about {
+    height: 1000px;
+    background-color: #E5E5E5;
+    position: relative;
+}
+
+
+/* Responsive Desing */
+
+@media screen and (max-width: 600px) {
+    /* Header Mobile */
+    .main-header {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        background-color: #000;
+        padding: 0;
+    }
+    .main-header i {
+        display: inline-block;
+        text-align: right;
+        width: 10%;
+        vertical-align: middle;
+        height: 50px;
+        cursor: pointer;
+    }
+    .main-header__brand {
+        width: 70%;
+        margin: 0;
+        display: inline-block;
+        margin: 10px 20px;
+    }
+    .main-header__brand img {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .main-nav {
+        display: none;
+    }
+    .main-header__cta {
+        display: none;
+    }
+    /* Cover Mobile */
+    .cover {
+        height: 30rem;
+    }
+    .cover__text {
+        text-align: center;
+        margin-bottom: 4rem;
+        padding: 0 2rem;
+    }
+    .cover__pretitle {
+        font-family: 'Dancing Script', cursive;
+        font-size: 1.2rem;
+        line-height: 32px;
+    }
+    .cover__title {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        font-weight: bold;
+        font-size: 2.5rem;
+        line-height: 48px;
+    }
+    .cover__subtitle {
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 300;
+        line-height: 48px;
+    }
+    /* Slider Mobile */
+    .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .slick-slide {
+        width: 90vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .slick-slide img {
+        margin: 0 auto;
+        max-width: 120px;
+        vertical-align: middle;
+    }
+    .item-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 200px;
+        margin-right: 0;
+    }
+    .slick-list {
+        position: absolute;
+        top: -140px;
+        left: 0;
+    }
+    .quote-container {
+        padding: 1rem;
+    }
+    .slick-dots {
+        position: absolute;
+        top: 135px;
+        left: 0;
+    }
+    .slick-dots li button:before {
+        color: #51AC6B !important;
+    }
+}
