@@ -75,7 +75,17 @@ $(".slider").slick({
         slidesToScroll: 2,
         dots: true
       }
-    }
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        centerMode: true,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true
+      }
+    },
   ]
 });
 
