@@ -5,6 +5,7 @@
 html,
 body {
     overflow-x: hidden;
+    background-color: #E5E5E5;
 }
 
 
@@ -16,7 +17,7 @@ body {
     align-items: center;
     position: fixed;
     width: 100%;
-    z-index: 100;
+    z-index: 300;
     padding: 1rem;
 }
 
@@ -190,6 +191,11 @@ body {
     src: url(./assets/gotham-thin.otf)
 }
 
+@font-face {
+    font-family: Gotham Book;
+    src: url(./assets/GothamBook.ttf)
+}
+
 .cover__text {
     text-align: center;
     margin-bottom: 4rem;
@@ -266,18 +272,18 @@ body {
 }
 
 .item-inner .quote-container__quote {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     text-align: justify;
-    font-weight: 600;
-    font-family: Gotham;
+    font-weight: 400;
+    font-family: Gotham Book;
     line-height: 24px;
     font-style: italic;
 }
 
 .item-inner .quote-container__quotee {
     font-size: 0.8rem;
-    font-family: Gotham;
-    font-weight: 900;
+    font-family: Gotham Book;
+    font-weight: 600;
     line-height: 36px;
     margin: 0;
 }
@@ -320,19 +326,6 @@ body {
 
 /* SLIDER-CONTROLS */
 
-
-/* .slick-arrow {
-    position: absolute !important;
-    top: 300px !important;
-    z-index: 150 !important;
-    background: yellow !important;
-    border: 1px solid #ff6c00 !important;
-    padding: 8px 15px !important;
-    border-radius: 50px !important;
-    width: 100px !important;
-    outline: none !important;
-} */
-
 .slick-next {
     top: 100px !important;
     left: 1% !important;
@@ -358,9 +351,537 @@ body {
 /* About Section */
 
 .about {
-    height: 1000px;
+    height: 55rem;
     background-color: #E5E5E5;
     position: relative;
+    background-image: url("./assets/nathan-about.png");
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
+    background-position: 15% 120%;
+    z-index: 100;
+}
+
+.about__presentation {
+    width: 25%;
+    position: absolute;
+    left: 10%;
+    top: 20%;
+}
+
+.about__presentation h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    line-height: 4rem;
+    font-weight: 700;
+}
+
+.about__presentation div {
+    border-bottom: 8px solid #000;
+    width: 15%;
+    margin: 25px 0;
+}
+
+.about__presentation h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+.about .about__nate-ilustration {
+    position: absolute;
+    left: 70px;
+    bottom: -80px;
+    width: 45%;
+}
+
+.textbox-container {
+    position: relative;
+}
+
+.about .about__textbox-white {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    width: 50%;
+    height: 30%;
+    z-index: 50;
+}
+
+.about .about__textbox-black {
+    position: absolute;
+    top: 31.5%;
+    left: 40.5%;
+    width: 50%;
+    height: 30%;
+    z-index: 49;
+}
+
+.about__phrase-container {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    width: 50%;
+    height: 30%;
+    z-index: 51;
+}
+
+.about .about__phrase {
+    text-align: justify;
+    padding: 2rem;
+    vertical-align: middle;
+    box-sizing: border-box;
+    font-family: Gotham Book;
+    font-size: 16px;
+    line-height: 40px;
+    transition: all ease 0.5s;
+    display: none;
+}
+
+.about_arrow {
+    width: 20px;
+    position: absolute;
+    bottom: 40px;
+    right: 25px;
+}
+
+.about_arrow:hover {
+    cursor: pointer;
+}
+
+.dots-container {
+    display: flex;
+    width: 100px;
+    height: 20px;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 65%;
+    left: 40%;
+    z-index: 60;
+}
+
+.dot {
+    background-color: #000;
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.selected-phrase {
+    display: block !important;
+    animation: fadeIn ease 2s;
+}
+
+.selected {
+    background-color: #C4C4C4;
+    border: 1px solid #C4C4C4;
+}
+
+.leaf12 {
+    position: absolute;
+    top: 18%;
+    left: 75%;
+    z-index: 65;
+}
+
+.leaf3 {
+    position: absolute;
+    top: 70%;
+    left: 80%;
+    z-index: 65;
+}
+
+.leaf6 {
+    position: absolute;
+    top: 77%;
+    left: 50%;
+    z-index: 65;
+}
+
+.leaf9 {
+    position: absolute;
+    top: 53%;
+    left: 4%;
+    z-index: 65;
+}
+
+.triangle-1 {
+    width: 100%;
+    height: 600px;
+    background-color: black;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    clip-path: polygon(50% 85%, 0% 100%, 100% 100%);
+}
+
+
+/* .triangle-2 {
+    width: 100%;
+    height: 600px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    clip-path: polygon(50% 85%, 100% 100%, 50% 100%);
+} */
+
+
+/* Services Section */
+
+.services {
+    height: 60rem;
+    background-color: black;
+    clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+}
+
+.services__title-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    line-height: 72px;
+}
+
+.services__title-container h1 {
+    width: 100%;
+    font-family: Gotham Book;
+    font-size: 4rem;
+    font-weight: 400;
+    color: #FFF;
+    text-align: center;
+    margin-top: 0;
+}
+
+.services__title-container div {
+    width: 10%;
+    border-bottom: 8px solid #FFF;
+    margin-top: 16px;
+}
+
+.services__cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.service-card {
+    width: 28%;
+    height: 270px;
+    background-color: #FFF;
+    box-sizing: border-box;
+    margin: 20px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+}
+
+.service-card .service-card__title {
+    width: 100%;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 48px;
+}
+
+.service-card .service-card_description {
+    width: 100%;
+    font-family: Gotham Book;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 28.8px;
+}
+
+.service-card:hover {
+    transform: scale(1.15);
+    transition: all ease 0.5s;
+}
+
+
+/* Roles Section */
+
+.roles {
+    height: 50rem;
+    background-color: #E5E5E5;
+}
+
+.roles__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50rem;
+    width: 70%;
+}
+
+.roles__container img {
+    width: 280px;
+    margin-top: 200px;
+}
+
+.roles__container .roles-info h1 {
+    font-family: Gotham Book;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 72px;
+    width: 60%;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 32px;
+}
+
+.roles__container .roles-info ul li {
+    font-family: Gotham Book;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 56px;
+    list-style: none;
+}
+
+.roles__container .roles-info ul li i {
+    margin-left: -45px;
+    margin-right: 10px;
+}
+
+.role-unselected {
+    opacity: 0.3;
+}
+
+
+/* Work Section */
+
+.work {
+    /* height: 60rem; */
+    background-color: #E5E5E5;
+    position: relative;
+}
+
+.work__title {
+    font-family: Gotham Book;
+    font-size: 48px;
+    line-height: 72px;
+    font-weight: 700;
+    margin-left: 5%;
+}
+
+.work__menu-container {
+    display: flex;
+    width: 90%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 32px;
+}
+
+.work__menu-container p {
+    font-family: Gotham Book;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0;
+    margin-right: 20px;
+    margin-top: 8px;
+}
+
+.work__menu-container button {
+    margin: 0;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    margin: 0 5px;
+    background-color: #F3F2F2;
+    border: none;
+    font-family: Gotham Book;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.work__menu-container button:hover,
+.work__menu-container button:active {
+    cursor: pointer;
+    background-color: #000;
+    color: #F3F2F2;
+}
+
+.work__cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.work-card {
+    width: 28%;
+    height: 300px;
+    background-color: #FFF;
+    box-sizing: border-box;
+    margin: 20px;
+}
+
+work-card__image-container {
+    width: 100%;
+}
+
+.work-card img {
+    width: 100%;
+    max-height: 150px;
+}
+
+.work-card .work-card__text-container {
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+.work-card .work-card__text-container .work-card__title {
+    font-family: Playfair Display;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 40px;
+}
+
+.work-card .work-card__text-container .work-card__description {
+    font-family: Gotham Book;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.work .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work .see-more-button {
+    padding: 0.6rem 2.5rem;
+    background-color: #E5E5E5;
+    color: #51AC6B;
+    border: 2px solid #51AC6B;
+    border-radius: 5px;
+    font-family: Gotham Book;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 2rem;
+    margin-bottom: 12rem;
+}
+
+.work .see-more-button:hover {
+    cursor: pointer;
+    color: #E5E5E5;
+    background-color: #51AC6B;
+}
+
+.triangle-3 {
+    width: 100%;
+    height: 500px;
+    background-color: #000;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    clip-path: polygon(50% 100%, 0% 100%, 0 85%);
+}
+
+.triangle-4 {
+    width: 100%;
+    height: 500px;
+    background-color: #000;
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    clip-path: polygon(50% 100%, 100% 100%, 100% 85%);
+}
+
+
+/* Footer section */
+
+footer {
+    height: 32rem;
+    background-color: #000;
+    position: relative;
+    /* clip-path: polygon(50% 10%, 100% 0, 100% 99%, 0 100%, 0 0); */
+}
+
+footer .footer__image-container {
+    width: 201px;
+    height: 239px;
+    border: 10px solid #000;
+    position: absolute;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: -110px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #000;
+    z-index: 100;
+}
+
+footer .footer__image-container img {
+    width: 100%;
+}
+
+footer h1 {
+    font-family: Playfair Display;
+    color: #FFF;
+    font-size: 48px;
+    line-height: 72px;
+    width: 100%;
+    text-align: center;
+    padding-top: 12rem;
+}
+
+footer .footer__logos-container {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+}
+
+footer .footer__logos-container i {
+    color: white;
+    font-size: 20px;
+}
+
+footer .footer__logos-container div {
+    height: 16px;
+    border-left: 2px solid #FFF;
+}
+
+footer .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .resume-button {
+    padding: 0.6rem 2.5rem;
+    color: #FFF;
+    background-color: #51AC6B;
+    border-radius: 5px;
+    font-family: Gotham Book;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 2rem;
+}
+
+footer .resume-button:hover {
+    background-color: #FFF;
+    color: #51AC6B;
+    border: 2px solid #51AC6B;
 }
 
 

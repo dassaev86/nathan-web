@@ -13,6 +13,11 @@ let mainHeader = document.querySelector(".main-header");
 let mobileNav = document.querySelector(".mobile-nav");
 let mobileCta = document.querySelector(".main-header__mobile-cta");
 let open = false;
+let phrases = document.querySelectorAll(".about__phrase");
+let aboutArrow = document.querySelector(".about_arrow");
+let dots = document.querySelectorAll(".dot");
+
+
 
 let hideMobileNav = (size) => {
   if (!size.matches) { // If media query matches
@@ -31,7 +36,7 @@ size.addListener(hideMobileNav) // Attach listener function on state changes
 
 let toggleMenu = (open) => {
   if (open) {
-    mainHeader.style.height = "100%";
+    mainHeader.style.height = "50%";
     mobileNav.style.display = "inline-block"
     mobileCta.style.display = "inline-block"
   } else {
@@ -89,6 +94,34 @@ jQuery(window).on("load scroll", function () {
     $(".main-header").addClass("sticky");
   }
 });
+
+
+let changePhrase = (currentPhrase) => {
+   
+  for (i=0; i < 4; i++) {
+    if (currentPhrase === i) {    
+      phrases[i].classList.add("selected-phrase");
+      dots[i].classList.add("selected");
+    } else {
+      phrases[i].classList.remove("selected-phrase");
+      dots[i].classList.remove("selected");
+    }
+    
+  } 
+}
+
+let currentPhrase = 0;
+aboutArrow.addEventListener("click", () => {
+   currentPhrase = currentPhrase + 1;
+   if (currentPhrase === 4) {
+     currentPhrase = 0;
+   }
+   changePhrase(currentPhrase);
+});
+
+
+
+
 
 
 
