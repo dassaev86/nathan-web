@@ -19,6 +19,10 @@ body {
     width: 100%;
     z-index: 300;
     padding: 1rem;
+    transition: all .3s ease-in-out;
+    min-height: 20px;
+    max-height: 500px;
+    overflow: auto;
 }
 
 .main-nav {
@@ -159,7 +163,6 @@ body {
 .main-header__mobile-cta:hover {
     border: 1px solid #FFF;
     background-color: hsla(137, 36%, 50%, 0.7);
-    ;
     color: #FFF;
     vertical-align: middle;
     cursor: pointer;
@@ -479,9 +482,23 @@ body {
     border-radius: 10px;
 }
 
+.dot:hover {
+    cursor: pointer;
+}
+
 .selected-phrase {
-    display: block !important;
-    animation: fadeIn ease 2s;
+    display: inline-block !important;
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .selected {
@@ -682,37 +699,123 @@ body {
 .roles {
     height: 50rem;
     background-color: #E5E5E5;
+    position: relative;
 }
 
 .roles__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
     height: 50rem;
-    width: 70%;
+    width: 100%;
 }
 
-.roles__container img {
-    width: 280px;
-    margin-top: 200px;
+.roles__list-mobile {
+    display: none;
+}
+
+
+/* .roles__container img {
+    position: absolute;
+    top: 50%;
+    right: 40%;
+    width: 300px;
+    z-index: 200;
+} */
+
+.roles__hats-container {
+    position: absolute;
+    top: 0;
+    right: 20%;
+    width: 350px;
+    height: 600px;
+    /* background-color: red; */
+}
+
+.roles__hats-container div:nth-child(1) {
+    position: absolute;
+    bottom: 33%;
+    right: 0;
+    z-index: 11;
+    /* display: none; */
+}
+
+.roles__hats-container div:nth-child(2) {
+    position: absolute;
+    bottom: 36%;
+    right: 0;
+    z-index: 11;
+    /* display: none; */
+}
+
+.roles__hats-container div:nth-child(3) {
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    z-index: 11;
+    /* display: none; */
+}
+
+.roles__hats-container div:nth-child(4) {
+    position: absolute;
+    bottom: 60%;
+    right: 0;
+    z-index: 11;
+    /* display: none; */
+}
+
+.roles__hats-container div:nth-child(5) {
+    position: absolute;
+    bottom: 70%;
+    right: 0;
+    z-index: 11;
+    /* display: none; */
+}
+
+.roles__hats-container div:nth-child(6) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    /* display: none; */
+}
+
+.roles__hats-container img {
+    width: 350px;
+}
+
+.roles__hats-container-mobile {
+    display: none;
+}
+
+.show-hat {
+    display: inline-block !important;
+}
+
+.roles__container .roles-info {
+    position: absolute;
+    top: 10%;
+    left: 20%;
 }
 
 .roles__container .roles-info h1 {
     font-family: Gotham Book;
-    font-size: 80px;
+    font-size: 60px;
     font-weight: 700;
-    line-height: 72px;
-    width: 60%;
+    line-height: 52px;
+    width: 70%;
     text-align: left;
     margin: 0;
     margin-bottom: 32px;
 }
 
+.roles__divisor {
+    display: none;
+}
+
 .roles__container .roles-info ul li {
     font-family: Gotham Book;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 400;
-    line-height: 56px;
+    line-height: 46px;
     list-style: none;
 }
 
@@ -964,6 +1067,75 @@ footer .resume-button:hover {
     border: 2px solid #51AC6B;
 }
 
+
+/* Call to Action Section */
+
+.cta-section {
+    height: 1000px;
+    background: #51AC6B;
+    position: relative;
+}
+
+.cta-section__header {
+    position: absolute;
+    top: 0;  
+    left: 0;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cta-section__header a {
+    flex: 1;
+    margin-left: 10%;
+}
+
+.cta-section__header i {
+    color: #FFF;
+    font-size: 1.5rem;
+    flex: 1;
+    text-align: right;
+    margin-right: 5%;
+}
+
+.cta__form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+}
+
+.cta__form label {
+    font-size: 24px;
+    font-family: Gotham Book;
+    line-height: 23px;
+    margin-bottom: 16px;
+    margin-left: 0;
+    color: #FFF;
+}
+
+.cta__form input {
+    width: 90%;
+    padding: 16px;
+    font-size: 72px;
+    line-height: 69px;
+    background-color: #51AC6B;
+    border: none;
+    border-bottom: 2px solid #FFF;
+    margin-left: 0;
+    color: #FFF;
+}
+
+::placeholder {
+    color: #FFF;
+}
+
+/* Responsive Desing Wide Screen  */
+
 @media screen and (max-width: 1100px) {
     .about {
         background-position: 15% 120%;
@@ -976,6 +1148,12 @@ footer .resume-button:hover {
     }
     .about__phrase-container {
         width: 50%;
+    }
+    .roles__container .roles-info {
+        left: 15%;
+    }
+    .roles__hats-container {
+        right: 15%;
     }
 }
 
@@ -1097,6 +1275,9 @@ footer .resume-button:hover {
     .roles__container {
         width: 90%;
     }
+    .roles__hats-container {
+        right: 5%;
+    }
     .roles__container .roles-info h1 {
         font-size: 64px;
         line-height: 56px;
@@ -1105,6 +1286,12 @@ footer .resume-button:hover {
     .roles__container .roles-info ul li {
         font-size: 28px;
         line-height: 40px;
+    }
+    .roles__container .roles-info {
+        left: 1%;
+    }
+    .roles__hats-container {
+        right: 1%;
     }
     /* Work Section Tablet */
     .work__title {
@@ -1357,16 +1544,94 @@ footer .resume-button:hover {
         width: 140px;
         /* margin-top: 200px; */
     }
+    .roles__hats-container {
+        display: none;
+    }
+    .roles__container .roles-info {
+        top: 8%;
+        left: 5%;
+    }
     .roles__container .roles-info h1 {
+        width: 60%;
         font-size: 48px;
-        width: 100%;
+        margin-bottom: 5px;
+    }
+    .roles__divisor {
+        display: inline-block;
+        width: 20%;
+        border-bottom: 8px solid #000;
+        text-align: left;
+    }
+    .roles__container .roles-info ul {
+        padding-left: 0;
     }
     .roles__container .roles-info ul li {
         font-size: 20px;
-        line-height: 40px;
+        line-height: 60px;
+        margin-right: 50px;
     }
     .roles__container .roles-info ul li i {
         display: none;
+    }
+    .roles__hats-container-mobile {
+        position: absolute;
+        top: 8%;
+        right: 1%;
+        width: 150px;
+        height: 600px;
+        display: block;
+        /* background-color: red; */
+    }
+    .roles__hats-container-mobile div:nth-child(1) {
+        position: absolute;
+        bottom: 49%;
+        right: 0;
+        z-index: 11;
+        /* display: none; */
+    }
+    .roles__hats-container-mobile div:nth-child(2) {
+        position: absolute;
+        bottom: 52%;
+        right: 0;
+        z-index: 11;
+        /* display: none; */
+    }
+    .roles__hats-container-mobile div:nth-child(3) {
+        position: absolute;
+        bottom: 56%;
+        right: 0;
+        z-index: 11;
+        /* display: none; */
+    }
+    .roles__hats-container-mobile div:nth-child(4) {
+        position: absolute;
+        bottom: 57%;
+        right: 0;
+        z-index: 11;
+        /* display: none; */
+    }
+    .roles__hats-container-mobile div:nth-child(5) {
+        position: absolute;
+        bottom: 60%;
+        right: 0;
+        z-index: 11;
+        /* display: none; */
+    }
+    .roles__hats-container-mobile div:nth-child(6) {
+        position: absolute;
+        bottom: 35%;
+        right: 0;
+        z-index: 10;
+        /* display: none; */
+    }
+    .roles__hats-container-mobile img {
+        width: 150px;
+    }
+    .roles__list {
+        display: none;
+    }
+    .roles__list-mobile {
+        display: block;
     }
     /* Work Section Mobile */
     .work__title {

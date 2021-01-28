@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
 
 <body>
@@ -279,27 +280,54 @@
         <div class="roles__container">
             <div class="roles-info">
                 <h1>Roles I've held</h1>
-                <ul>
-                    <li><i class="fas fa-check"></i>Sales</li>
-                    <li><i class="fas fa-check"></i>Product Owner</li>
-                    <li class="role-unselected">Content Creation</li>
-                    <li class="role-unselected">Copywriting</li>
-                    <li class="role-unselected">Marketing</li>
+                <div class="roles__divisor"></div>
+                <ul class="roles__list">
+                    <li data-aos="fade-right" data-aos-offset="150"><i class="fas fa-check"></i>Sales</li>
+                    <li data-aos="fade-right" data-aos-offset="280"><i class="fas fa-check"></i>Product Owner</li>
+                    <li data-aos="fade-right" data-aos-offset="360"><i class="fas fa-check"></i>Content Creation</li>
+                    <li data-aos="fade-right" data-aos-offset="440"><i class="fas fa-check"></i>Copywriting</li>
+                    <li data-aos="fade-right" data-aos-offset="520"><i class="fas fa-check"></i>Marketing</li>
+                </ul>
+
+                <ul class="roles__list-mobile">
+                    <li data-aos="fade-right" data-aos-offset="200" data-aos-delay="0" data-aos-duration="2000"><i class="fas fa-check"></i>Sales</li>
+                    <li data-aos="fade-right" data-aos-offset="200" data-aos-delay="700" data-aos-duration="2000"><i class="fas fa-check"></i>Product Owner</li>
+                    <li data-aos="fade-right" data-aos-offset="200" data-aos-delay="1400" data-aos-duration="2000"><i class="fas fa-check"></i>Content Creation</li>
+                    <li data-aos="fade-right" data-aos-offset="200" data-aos-delay="2100" data-aos-duration="2000"><i class="fas fa-check"></i>Copywriting</li>
+                    <li data-aos="fade-right" data-aos-offset="200" data-aos-delay="2800" data-aos-duration="2000"><i class="fas fa-check"></i>Marketing</li>
                 </ul>
             </div>
 
-            <img src="./assets/nathan-roles.png" alt="Nathan-Roles">
+
+            <div class="roles__hats-container ">
+                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000" data-aos-delay="0" data-aos-offset="200"><img src="./assets/hat1.png " alt=" "></div>
+                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000" data-aos-delay="0" data-aos-offset="400"><img src="./assets/hat2.png " alt=" "></div>
+                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000" data-aos-delay="0" data-aos-offset="550"><img src="./assets/hat3.png " alt=" "></div>
+                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000" data-aos-delay="0" data-aos-offset="700"><img src="./assets/hat4.png " alt=" "></div>
+                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000" data-aos-delay="0" data-aos-offset="900"><img src="./assets/hat5.png " alt=" "></div>
+                <div data-aos="fade-up " data-aos-duration="3000 "><img src="./assets/nathan-roles.png " alt="Nathan-Roles "></div>
+            </div>
+
+            <div class="roles__hats-container-mobile">
+                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000" data-aos-delay="0" data-aos-offset="200"><img src="./assets/mob-hat1.png" alt=" "></div>
+                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000" data-aos-delay="700" data-aos-offset="200"><img src="./assets/mob-hat2.png " alt=" "></div>
+                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000" data-aos-delay="1400" data-aos-offset="200"><img src="./assets/mob-hat3.png " alt=" "></div>
+                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000" data-aos-delay="2100" data-aos-offset="200"><img src="./assets/mob-hat4.png " alt=" "></div>
+                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000" data-aos-delay="2800" data-aos-offset="200"><img src="./assets/mob-hat5.png " alt=" "></div>
+                <div data-aos="fade-up " data-aos-duration="3000 "><img src="./assets/nathan-roles.png " alt="Nathan-Roles "></div>
+            </div>
+
         </div>
 
     </section>
 
 
-    <section id="work" class="work">
+    <section id="work " class="work ">
 
-        <h1 class="work__title">My work in action</h1>
-        <div class="work__division"></div>
+        <h1 class="work__title ">My work in action</h1>
+        <div class="work__division "></div>
 
-        <div class="work__menu-container">
+        <div class="work__menu-container ">
             <p>Filter by type</p>
             <button>All</button>
             <button>Writing</button>
@@ -308,18 +336,18 @@
             <button>Project management</button>
         </div>
 
-        <div class="work__menu-mobile-container">
+        <div class="work__menu-mobile-container ">
 
             <p>Filter by type</p>
 
-            <div class="custom-select" style="width:200px;">
+            <div class="custom-select " style="width:200px; ">
                 <select>
-                    <option value="0">Filter...</option>
-                    <option value="1">All categories</option>
-                    <option value="2">Writing</option>
-                    <option value="3">Product positioning</option>
-                    <option value="4">Edits</option>
-                    <option value="5">Project management</option>
+                    <option value="0 ">Filter...</option>
+                    <option value="1 ">All categories</option>
+                    <option value="2 ">Writing</option>
+                    <option value="3 ">Product positioning</option>
+                    <option value="4 ">Edits</option>
+                    <option value="5 ">Project management</option>
 
 
                 </select>
@@ -327,101 +355,129 @@
         </div>
 
 
-        <div class="work__cards-container">
-            <div class="work-card">
-                <div class="work-card__image-container">
-                    <img src="./assets/blog-image1.png" alt="Blog Image">
+        <div class="work__cards-container ">
+            <div class="work-card ">
+                <div class="work-card__image-container ">
+                    <img src="./assets/blog-image1.png " alt="Blog Image ">
                 </div>
-                <div class="work-card__text-container">
-                    <p class="work-card__title">Project management & UX writing</p>
-                    <p class="work-card__description">Product Owner / www.codelitt.com</p>
-                </div>
-            </div>
-            <div class="work-card">
-                <div class="work-card__image-container">
-                    <img src="./assets/blog-image2.png" alt="Blog Image">
-                </div>
-                <div class="work-card__text-container">
-                    <p class="work-card__title">UX writing</p>
-                    <p class="work-card__description">Copywriter for Art Director / www.adancareta.com </p>
+                <div class="work-card__text-container ">
+                    <p class="work-card__title ">Project management & UX writing</p>
+                    <p class="work-card__description ">Product Owner / www.codelitt.com</p>
                 </div>
             </div>
-            <div class="work-card">
-                <div class="work-card__image-container">
-                    <img src="./assets/blog-image3.png" alt="Blog Image">
+            <div class="work-card ">
+                <div class="work-card__image-container ">
+                    <img src="./assets/blog-image2.png " alt="Blog Image ">
                 </div>
-                <div class="work-card__text-container">
-                    <p class="work-card__title">Positioning</p>
-                    <p class="work-card__description">Codelitt - Productized services</p>
-                </div>
-            </div>
-            <div class="work-card">
-                <div class="work-card__image-container">
-                    <img src="./assets/blog-image4.png" alt="Blog Image">
-                </div>
-                <div class="work-card__text-container">
-                    <p class="work-card__title">Positioning</p>
-                    <p class="work-card__description">Increased user adoption of Sourcing service by 240%</p>
+                <div class="work-card__text-container ">
+                    <p class="work-card__title ">UX writing</p>
+                    <p class="work-card__description ">Copywriter for Art Director / www.adancareta.com </p>
                 </div>
             </div>
-            <div class="work-card">
-                <div class="work-card__image-container">
-                    <img src="./assets/blog-image5.png" alt="Blog Image">
+            <div class="work-card ">
+                <div class="work-card__image-container ">
+                    <img src="./assets/blog-image3.png " alt="Blog Image ">
                 </div>
-                <div class="work-card__text-container">
-                    <p class="work-card__title">Blog</p>
-                    <p class="work-card__description">Creative Destruction: The Risks of Not Innovating</p>
+                <div class="work-card__text-container ">
+                    <p class="work-card__title ">Positioning</p>
+                    <p class="work-card__description ">Codelitt - Productized services</p>
                 </div>
             </div>
-            <div class="work-card">
-                <div class="work-card__image-container">
-                    <img src="./assets/blog-image6.png" alt="Blog Image">
+            <div class="work-card ">
+                <div class="work-card__image-container ">
+                    <img src="./assets/blog-image4.png " alt="Blog Image ">
                 </div>
-                <div class="work-card__text-container">
-                    <p class="work-card__title">Blog</p>
-                    <p class="work-card__description">Empathy in Product Design</p>
+                <div class="work-card__text-container ">
+                    <p class="work-card__title ">Positioning</p>
+                    <p class="work-card__description ">Increased user adoption of Sourcing service by 240%</p>
+                </div>
+            </div>
+            <div class="work-card ">
+                <div class="work-card__image-container ">
+                    <img src="./assets/blog-image5.png " alt="Blog Image ">
+                </div>
+                <div class="work-card__text-container ">
+                    <p class="work-card__title ">Blog</p>
+                    <p class="work-card__description ">Creative Destruction: The Risks of Not Innovating</p>
+                </div>
+            </div>
+            <div class="work-card ">
+                <div class="work-card__image-container ">
+                    <img src="./assets/blog-image6.png " alt="Blog Image ">
+                </div>
+                <div class="work-card__text-container ">
+                    <p class="work-card__title ">Blog</p>
+                    <p class="work-card__description ">Empathy in Product Design</p>
                 </div>
             </div>
         </div>
 
-        <div class="button-container">
-            <button class="see-more-button">See More</button>
+        <div class="button-container ">
+            <button class="see-more-button ">See More</button>
         </div>
 
-        <div class="triangle-3"></div>
-        <div class="triangle-4"></div>
+        <div class="triangle-3 "></div>
+        <div class="triangle-4 "></div>
 
 
     </section>
 
     <footer>
 
-        <div class="footer__image-container">
-            <img src="./assets/nathan-footer.png" alt="Nathan Picture">
+        <div class="footer__image-container ">
+            <img src="./assets/nathan-footer.png " alt="Nathan Picture ">
         </div>
 
         <h1>Nathan Mengler</h1>
 
-        <div class="footer__logos-container">
-            <i class="fab fa-linkedin-in"></i>
+        <div class="footer__logos-container ">
+            <i class="fab fa-linkedin-in "></i>
             <div></div>
-            <i class="fas fa-envelope"></i>
+            <i class="fas fa-envelope "></i>
         </div>
 
-        <div class="button-container">
-            <button class="resume-button">Download resume</button>
+        <div class="button-container ">
+            <button class="resume-button ">Download resume</button>
         </div>
 
     </footer>
 
+    <section class="cta-section">
+        <div class="cta-section__header">
+            <a href="index.html" class="cta-section__brand">
+                <img src="./assets/nate-logo.png" alt="Nathan Mengler">
+            </a>
+            <i class="fas fa-times"></i>
+        </div>
+
+        <div class="cta__form">
+            <label for="name">I'm excited to hear from you!</label>
+            <input type="text" id="name" name="name" placeholder="Name">
+            <div class="cta__form-actions">
+                <img src="./assets/arrow-fordward.png" alt="Arrow-back">
+                <div class="form-action__page-numbers">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                </div>
+                <button>Next</button>
+            </div>
+        </div>
+
+    </section>
 
 
 
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
-    <script src="./custom.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js " integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin=" anonymous "></script>
+    <script src="./custom.js "></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
