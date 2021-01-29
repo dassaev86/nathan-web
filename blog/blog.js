@@ -27,7 +27,7 @@ size.addListener(hideMobileNav) // Attach listener function on state changes
 
 let toggleMenu = (open) => {
   if (open) {
-    mainHeader.style.height = "70%";
+    mainHeader.style.height = "65%";
     mobileNav.style.display = "inline-block"
     mobileCta.style.display = "inline-block"
   } else {
@@ -39,193 +39,26 @@ let toggleMenu = (open) => {
 
 
 menuButton.addEventListener("click", () => {
-  
   open = !open;
   toggleMenu(open);
-
 })
 
 
-$(".slider").slick({
-  centerMode: true,
-  slidesToShow: 2,
-  slidesToScroll: 2,
-  variableWidth: true,
-  arrowControls: true,
-  infinite: true,
-  speed: 1000,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  responsive: [
-    {
-      breakpoint: 600,
-      settings: {
-        centerMode: true,
-        arrows: false,
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 800,
-      settings: {
-        centerMode: true,
-        arrows: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true
-      }
-    },
-  ]
-});
-
-
-$(".slider__services").slick({
-  centerMode: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  variableWidth: true,
-  arrowControls: true,
-  infinite: true,
-  speed: 1000,
-  autoplay: true,
-  autoplaySpeed: 2500,
-  responsive: [
-    {
-      breakpoint: 600,
-      settings: {
-        centerMode: true,
-        arrows: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 800,
-      settings: {
-        centerMode: true,
-        arrows: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true
-      }
-    },
-  ]
-});
-
 
 jQuery(window).on("load scroll", function () {
-  // "use strict"; // Start of use strict
-  // // Loader
-  // $(".spinner").fadeOut();
-  // $(".preloader-area").delay(350).fadeOut("slow");
- 
-  let scroll = $(window).scrollTop();
-  console.log("Scroll: ", scroll)
-  if (scroll < 2) {
-    $(".main-header").removeClass("sticky");
-  } else {
-    $(".main-header").addClass("sticky");
-  }
-
-  // if (scroll < 1950) {
-  //   $(".roles__hats-container div:nth-child(1)").removeClass("show-hat");
-  // } else {
-  //   $(".roles__hats-container div:nth-child(1)").addClass("show-hat");
-  // }
-
-  // if (scroll < 2050) {
-  //   $(".roles__hats-container div:nth-child(2)").removeClass("show-hat");
-  // } else {
-  //   $(".roles__hats-container div:nth-child(2)").addClass("show-hat");
-  // }
-
-  // if (scroll < 2150) {
-  //   $(".roles__hats-container div:nth-child(3)").removeClass("show-hat");
-  // } else {
-  //   $(".roles__hats-container div:nth-child(3)").addClass("show-hat");
-  // }
-
-  // if (scroll < 2250) {
-  //   $(".roles__hats-container div:nth-child(4)").removeClass("show-hat");
-  // } else {
-  //   $(".roles__hats-container div:nth-child(4)").addClass("show-hat");
-  // }
-
-  // if (scroll < 2350) {
-  //   $(".roles__hats-container div:nth-child(5)").removeClass("show-hat");
-  // } else {
-  //   $(".roles__hats-container div:nth-child(5)").addClass("show-hat");
-  // }
-
-
-
-});
-
-
-
-
-let changePhrase = (currentPhrase) => {
    
-  for (i=0; i < 4; i++) {
-    if (currentPhrase === i) {    
-      phrases[i].classList.add("selected-phrase");
-      dots[i].classList.add("selected");
+    let scroll = $(window).scrollTop();
+    console.log("Scroll: ", scroll)
+    if (scroll < 2) {
+      $(".main-header").removeClass("sticky");
     } else {
-      phrases[i].classList.remove("selected-phrase");
-      dots[i].classList.remove("selected");
+      $(".main-header").addClass("sticky");
     }
     
-  } 
-}
-
-let currentPhrase = 0;
-aboutArrow.addEventListener("click", () => {
-   currentPhrase = currentPhrase + 1;
-   if (currentPhrase === 4) {
-     currentPhrase = 0;
-   }
-   changePhrase(currentPhrase);
-});
-
-dots[0].addEventListener("click", () => {
-  currentPhrase = 0;
-  changePhrase(currentPhrase);
-});
-
-dots[1].addEventListener("click", () => {
-  currentPhrase = 1;
-  changePhrase(currentPhrase);
-});
+  });
 
 
-dots[2].addEventListener("click", () => {
-  currentPhrase = 2;
-  changePhrase(currentPhrase);
-});
-
-
-dots[3].addEventListener("click", () => {
-  currentPhrase = 3;
-  changePhrase(currentPhrase);
-});
-
-phraseContainer.addEventListener("click", () => {
-  currentPhrase = currentPhrase + 1;
-  if (currentPhrase === 4) {
-    currentPhrase = 0;
-  }
-  changePhrase(currentPhrase);
-});
-
-
-
-
-
-
-// Work Menu Mobile Select Code
+  // Work Menu Mobile Select Code
 
 var x, i, j, l, ll, selElmnt, a, b, c;
 /* Look for any elements with the class "custom-select": */
@@ -307,17 +140,3 @@ function closeAllSelect(elmnt) {
 /* If the user clicks anywhere outside the select box,
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
-
-let rolesScroll = 0;
-$(".roles").scroll(function(){
-  console.log("Estoy en roles: ", rolesScroll);
-});
-
-
-
-
-
-
-
-
-
