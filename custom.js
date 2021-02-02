@@ -242,7 +242,8 @@ let confirmationCloseButton = document.querySelector("#confirmation button");
 let ctaSection = document.querySelector(".cta-section");
 let ctaButton = document.querySelector(".main-header__cta");
 let closeModal = document.querySelector(".cta-section__header i");
-let requiredMessage = document.querySelector(".required-message");
+let requiredMessageName = document.querySelector("#input-name .required-message");
+let requiredMessageEmail = document.querySelector("#input-email .required-message");
 
 
 
@@ -261,18 +262,33 @@ nameNextButton.addEventListener("click", () => {
     inputNameForm.style.display = "none";
     inputEmailForm.style.display = "flex";
     inputEmailLabel.innerHTML = "Thanks " + inputName.value + "! What's your email?"
-    requiredMessage.style.display = "none";
+    requiredMessageName.style.display = "none";
     inputName.classList.remove("required-input")
   } else {
-    requiredMessage.style.display = "block";
+    requiredMessageName.style.display = "block";
     inputName.classList.add("required-input")
   }
 
 });
 
 emailNextButton.addEventListener("click", () => {
+
+if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(inputEmail.value)) {
   inputEmailForm.style.display = "none";
   inputMessageForm.style.display = "flex";
+  requiredMessageEmail.style.display = "none";
+  inputEmail.classList.remove("required-input")
+} else {
+  requiredMessageEmail.style.display = "block";
+  inputEmail.classList.add("required-input")
+}
+
+
+
+
+
+
+
 });
 
 emailBackArrow.addEventListener("click", () => {
