@@ -7,6 +7,7 @@ let phrases = document.querySelectorAll(".about__phrase");
 let aboutArrow = document.querySelector(".about_arrow");
 let dots = document.querySelectorAll(".dot");
 let phraseContainer = document.querySelector(".about__phrase-container");
+let currentPhrase = 0;
 
 
 
@@ -27,7 +28,7 @@ size.addListener(hideMobileNav) // Attach listener function on state changes
 
 let toggleMenu = (open) => {
   if (open) {
-    mainHeader.style.height = "70%";
+    mainHeader.style.height = "100%";
     mobileNav.style.display = "inline-block"
     mobileCta.style.display = "inline-block"
   } else {
@@ -39,10 +40,8 @@ let toggleMenu = (open) => {
 
 
 menuButton.addEventListener("click", () => {
-  
   open = !open;
   toggleMenu(open);
-
 })
 
 
@@ -53,9 +52,10 @@ $(".slider").slick({
   variableWidth: true,
   arrowControls: true,
   infinite: true,
-  speed: 1000,
   autoplay: true,
   autoplaySpeed: 3000,
+  prevArrow:"<img class='a-left control-c prev slick-prev' src='./assets/arrow-back.png'>",
+  nextArrow:"<img class='a-right control-c next slick-next' src='./assets/arrow-fordward2.png'>",
   responsive: [
     {
       breakpoint: 600,
@@ -88,7 +88,6 @@ $(".slider__services").slick({
   variableWidth: true,
   arrowControls: true,
   infinite: true,
-  speed: 1000,
   autoplay: true,
   autoplaySpeed: 2500,
   responsive: [
@@ -181,14 +180,16 @@ let changePhrase = (currentPhrase) => {
   } 
 }
 
-let currentPhrase = 0;
-aboutArrow.addEventListener("click", () => {
-   currentPhrase = currentPhrase + 1;
-   if (currentPhrase === 4) {
-     currentPhrase = 0;
-   }
-   changePhrase(currentPhrase);
-});
+
+// aboutArrow.addEventListener("click", () => {
+//   console.log("Current Before: ", currentPhrase);
+//    currentPhrase = currentPhrase + 1 ;
+//    if (currentPhrase > 3) {
+//      currentPhrase = 0;
+//    }
+//    console.log("Current After: ", currentPhrase);
+//    changePhrase(currentPhrase);
+// });
 
 dots[0].addEventListener("click", () => {
   currentPhrase = 0;
@@ -221,97 +222,84 @@ phraseContainer.addEventListener("click", () => {
 });
 
 
+// Call to Action Code
+
+let inputNameForm = document.querySelector('#input-name');
+let inputEmailForm = document.querySelector('#input-email');
+let inputMessageForm = document.querySelector('#input-message');
+let confirmationForm = document.querySelector('#confirmation');
+let inputName = document.querySelector("#input-name #name");
+let inputEmail = document.querySelector("#input-email #email");
+let inputMessage = document.querySelector("#input-message #message");
+let inputEmailLabel = document.querySelector("#input-email label");
+let inputConfirmationLabel = document.querySelector("#confirmation label");
+let nameNextButton = document.querySelector('#input-name button');
+let emailNextButton = document.querySelector('#input-email button');
+let messageSendButton = document.querySelector('#input-message button');
+let emailBackArrow = document.querySelector("#input-email img");
+let messageBackArrow = document.querySelector("#input-message img");
+let confirmationCloseButton = document.querySelector("#confirmation button");
+let ctaSection = document.querySelector(".cta-section");
+let ctaButton = document.querySelector(".main-header__cta");
+let closeModal = document.querySelector(".cta-section__header i");
+let requiredMessage = document.querySelector(".required-message");
 
 
 
-
-// Work Menu Mobile Select Code
-
-var x, i, j, l, ll, selElmnt, a, b, c;
-/* Look for any elements with the class "custom-select": */
-x = document.getElementsByClassName("custom-select");
-l = x.length;
-for (i = 0; i < l; i++) {
-  selElmnt = x[i].getElementsByTagName("select")[0];
-  ll = selElmnt.length;
-  /* For each element, create a new DIV that will act as the selected item: */
-  a = document.createElement("DIV");
-  a.setAttribute("class", "select-selected");
-  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-  x[i].appendChild(a);
-  /* For each element, create a new DIV that will contain the option list: */
-  b = document.createElement("DIV");
-  b.setAttribute("class", "select-items select-hide");
-  for (j = 1; j < ll; j++) {
-    /* For each option in the original select element,
-    create a new DIV that will act as an option item: */
-    c = document.createElement("DIV");
-    c.innerHTML = selElmnt.options[j].innerHTML;
-    c.addEventListener("click", function(e) {
-        /* When an item is clicked, update the original select box,
-        and the selected item: */
-        var y, i, k, s, h, sl, yl;
-        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-        sl = s.length;
-        h = this.parentNode.previousSibling;
-        for (i = 0; i < sl; i++) {
-          if (s.options[i].innerHTML == this.innerHTML) {
-            s.selectedIndex = i;
-            h.innerHTML = this.innerHTML;
-            y = this.parentNode.getElementsByClassName("same-as-selected");
-            yl = y.length;
-            for (k = 0; k < yl; k++) {
-              y[k].removeAttribute("class");
-            }
-            this.setAttribute("class", "same-as-selected");
-            break;
-          }
-        }
-        h.click();
-    });
-    b.appendChild(c);
-  }
-  x[i].appendChild(b);
-  a.addEventListener("click", function(e) {
-    /* When the select box is clicked, close any other select boxes,
-    and open/close the current select box: */
-    e.stopPropagation();
-    closeAllSelect(this);
-    this.nextSibling.classList.toggle("select-hide");
-    this.classList.toggle("select-arrow-active");
-  });
-}
-
-function closeAllSelect(elmnt) {
-  /* A function that will close all select boxes in the document,
-  except the current select box: */
-  var x, y, i, xl, yl, arrNo = [];
-  x = document.getElementsByClassName("select-items");
-  y = document.getElementsByClassName("select-selected");
-  xl = x.length;
-  yl = y.length;
-  for (i = 0; i < yl; i++) {
-    if (elmnt == y[i]) {
-      arrNo.push(i)
-    } else {
-      y[i].classList.remove("select-arrow-active");
-    }
-  }
-  for (i = 0; i < xl; i++) {
-    if (arrNo.indexOf(i)) {
-      x[i].classList.add("select-hide");
-    }
-  }
-}
-
-/* If the user clicks anywhere outside the select box,
-then close all select boxes: */
-document.addEventListener("click", closeAllSelect);
-
-let rolesScroll = 0;
-$(".roles").scroll(function(){
-  console.log("Estoy en roles: ", rolesScroll);
+ctaButton.addEventListener("click", () => {
+  ctaSection.classList.remove('hidden');
 });
+
+closeModal.addEventListener("click", () => {
+  ctaSection.classList.add('hidden');
+});
+
+
+nameNextButton.addEventListener("click", () => {
+
+  if (inputName.value.trim() !== "") {
+    inputNameForm.style.display = "none";
+    inputEmailForm.style.display = "flex";
+    inputEmailLabel.innerHTML = "Thanks " + inputName.value + "! What's your email?"
+    requiredMessage.style.display = "none";
+    inputName.classList.remove("required-input")
+  } else {
+    requiredMessage.style.display = "block";
+    inputName.classList.add("required-input")
+  }
+
+});
+
+emailNextButton.addEventListener("click", () => {
+  inputEmailForm.style.display = "none";
+  inputMessageForm.style.display = "flex";
+});
+
+emailBackArrow.addEventListener("click", () => {
+  inputEmailForm.style.display = "none";
+  inputNameForm.style.display = "flex";
+});
+
+messageSendButton.addEventListener("click", () => {
+  inputMessageForm.style.display = "none";
+  confirmationForm.style.display = "flex";
+  inputConfirmationLabel.innerHTML = "Thank you, " + inputName.value + ".";
+});
+
+messageBackArrow.addEventListener("click", () => {
+  inputEmailForm.style.display = "flex";
+  inputMessageForm.style.display = "none";
+});
+
+confirmationCloseButton.addEventListener("click", () => {
+  ctaSection.classList.add('hidden');
+});
+
+
+
+
+
+
 
 
 

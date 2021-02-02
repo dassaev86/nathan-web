@@ -335,23 +335,6 @@
             <button>Project management</button>
         </div>
 
-        <div class="work__menu-mobile-container ">
-
-            <p>Filter by type</p>
-
-            <div class="custom-select " style="width:200px; ">
-                <select>
-                    <option value="0 ">Filter...</option>
-                    <option value="1 ">All categories</option>
-                    <option value="2 ">Writing</option>
-                    <option value="3 ">Product positioning</option>
-                    <option value="4 ">Edits</option>
-                    <option value="5 ">Project management</option>
-                </select>
-            </div>
-        </div>
-
-
         <div class="work__cards-container ">
             <div class="work-card ">
                 <div class="work-card__image-container ">
@@ -439,7 +422,9 @@
 
     </footer>
 
-    <section class="cta-section">
+
+
+    <section class="cta-section hidden">
         <div class="cta-section__header">
             <a href="index.html" class="cta-section__brand">
                 <img src="./assets/nate-logo.png" alt="Nathan Mengler">
@@ -447,25 +432,65 @@
             <i class="fas fa-times"></i>
         </div>
 
-        <div class="cta__form">
+        <div id="input-name" class="cta__form">
             <label for="name">I'm excited to hear from you!</label>
             <input type="text" id="name" name="name" placeholder="Name">
+            <p class="required-message">This field is required</p>
             <div class="cta__form-actions">
-                <img src="./assets/arrow-fordward.png" alt="Arrow-back">
+                <div class="image-container">
+                </div>
                 <div class="form-action__page-numbers">
-                    <p>1</p>
+                    <p class="page_selected">1</p>
                     <p>2</p>
                     <p>3</p>
                 </div>
-                <button>Next</button>
+                <button class="cta__next-nutton">Next</button>
+            </div>
+        </div>
+
+        <div id="input-email" class="cta__form">
+            <label for="email"></label>
+            <input type="email" id="email" name="email" placeholder="Email">
+            <div class="cta__form-actions">
+                <div class="image-container">
+                    <img src="./assets/arrow-back-cta.png" alt="Arrow-back">
+                </div>
+
+                <div class="form-action__page-numbers">
+                    <p>1</p>
+                    <p class="page_selected">2</p>
+                    <p>3</p>
+                </div>
+                <button class="cta__next-nutton">Next</button>
+            </div>
+        </div>
+
+        <div id="input-message" class="cta__form">
+            <label for="message">What will we be discussing?</label>
+            <input type="text" id="message" name="message" placeholder="Message">
+            <div class="cta__form-actions">
+                <div class="image-container">
+                    <img src="./assets/arrow-back-cta.png" alt="Arrow-back">
+                </div>
+
+                <div class="form-action__page-numbers">
+                    <p>1</p>
+                    <p>2</p>
+                    <p class="page_selected">3</p>
+                </div>
+                <button class="cta__next-nutton">Send</button>
+            </div>
+        </div>
+
+        <div id="confirmation" class="cta__form">
+            <label></label>
+            <p class="confirmation-message">I will reach out to you soon!</p>
+            <div class="cta__form-actions">
+                <button class="cta__next-nutton">Back to Home</button>
             </div>
         </div>
 
     </section>
-
-
-
-
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>

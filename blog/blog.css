@@ -306,6 +306,13 @@
     cursor: pointer;
     text-decoration: none;
     color: #000;
+    filter: grayscale(100%);
+}
+
+.work-card:hover {
+    filter: grayscale(0%);
+    transform: scale(1.15);
+    transition: all ease 0.5s;
 }
 
 .work-card__image-container {
@@ -601,65 +608,6 @@ footer .resume-button:hover {
     .work__menu-mobile-container p {
         margin-right: 0;
         margin-bottom: 8px;
-    }
-    /* Menu Mobile Select Styles */
-    /* The container must be positioned relative: */
-    .custom-select {
-        position: relative;
-        font-family: Gotham Book;
-    }
-    .custom-select select {
-        display: none;
-        /*hide original SELECT element: */
-    }
-    .select-selected {
-        background-color: #F4F4F4;
-        width: 250px;
-        /* margin-left: -25px; */
-    }
-    /* Style the arrow inside the select element: */
-    .select-selected:after {
-        position: absolute;
-        content: "";
-        top: 14px;
-        right: -70px;
-        width: 0;
-        height: 0;
-        border: 6px solid transparent;
-        border-color: #01C7A3 transparent transparent transparent;
-    }
-    /* Point the arrow upwards when the select box is open (active): */
-    .select-selected.select-arrow-active:after {
-        border-color: transparent transparent #01C7A3 transparent;
-        top: 7px;
-    }
-    /* style the items (options), including the selected item: */
-    .select-items div,
-    .select-selected {
-        font-size: 18px;
-        color: #000;
-        padding: 8px 16px;
-        border: 1px solid transparent;
-        border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-        cursor: pointer;
-    }
-    /* Style items (options): */
-    .select-items {
-        position: absolute;
-        background-color: #F4F4F4;
-        top: 100%;
-        left: 0;
-        right: 0;
-        z-index: 99;
-        width: 284px;
-    }
-    /* Hide the items when the select box is closed: */
-    .select-hide {
-        display: none;
-    }
-    .select-items div:hover,
-    .same-as-selected {
-        background-color: rgba(0, 0, 0, 0.1);
     }
     /* Footer Mobile */
     footer h1 {
