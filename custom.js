@@ -28,7 +28,7 @@ size.addListener(hideMobileNav) // Attach listener function on state changes
 
 let toggleMenu = (open) => {
   if (open) {
-    mainHeader.style.height = "100%";
+    mainHeader.style.height = "70%";
     mobileNav.style.display = "inline-block"
     mobileCta.style.display = "inline-block"
   } else {
@@ -233,12 +233,12 @@ let inputEmail = document.querySelector("#input-email #email");
 let inputMessage = document.querySelector("#input-message #message");
 let inputEmailLabel = document.querySelector("#input-email label");
 let inputConfirmationLabel = document.querySelector("#confirmation label");
-let nameNextButton = document.querySelector('#input-name button');
-let emailNextButton = document.querySelector('#input-email button');
-let messageSendButton = document.querySelector('#input-message button');
-let emailBackArrow = document.querySelector("#input-email img");
-let messageBackArrow = document.querySelector("#input-message img");
-let confirmationCloseButton = document.querySelector("#confirmation button");
+let nameNextButton = document.querySelectorAll('#input-name button');
+let emailNextButton = document.querySelectorAll('#input-email button');
+let messageSendButton = document.querySelectorAll('#input-message button');
+let emailBackArrow = document.querySelectorAll("#input-email img");
+let messageBackArrow = document.querySelectorAll("#input-message img");
+let confirmationCloseButton = document.querySelectorAll("#confirmation button");
 let ctaSection = document.querySelector(".cta-section");
 let ctaButton = document.querySelector(".main-header__cta");
 let closeModal = document.querySelector(".cta-section__header i");
@@ -247,7 +247,12 @@ let requiredMessageEmail = document.querySelector("#input-email .required-messag
 
 
 
+
 ctaButton.addEventListener("click", () => {
+  ctaSection.classList.remove('hidden');
+});
+
+mobileCta.addEventListener("click", () => {
   ctaSection.classList.remove('hidden');
 });
 
@@ -256,8 +261,7 @@ closeModal.addEventListener("click", () => {
 });
 
 
-nameNextButton.addEventListener("click", () => {
-
+const nameNextButtonClick = () => {
   if (inputName.value.trim() !== "") {
     inputNameForm.style.display = "none";
     inputEmailForm.style.display = "flex";
@@ -268,46 +272,61 @@ nameNextButton.addEventListener("click", () => {
     requiredMessageName.style.display = "block";
     inputName.classList.add("required-input")
   }
-
-});
-
-emailNextButton.addEventListener("click", () => {
-
-if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(inputEmail.value)) {
-  inputEmailForm.style.display = "none";
-  inputMessageForm.style.display = "flex";
-  requiredMessageEmail.style.display = "none";
-  inputEmail.classList.remove("required-input")
-} else {
-  requiredMessageEmail.style.display = "block";
-  inputEmail.classList.add("required-input")
 }
 
+const emailNextButtonClick = () => {
+  if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(inputEmail.value)) {
+    inputEmailForm.style.display = "none";
+    inputMessageForm.style.display = "flex";
+    requiredMessageEmail.style.display = "none";
+    inputEmail.classList.remove("required-input")
+  } else {
+    requiredMessageEmail.style.display = "block";
+    inputEmail.classList.add("required-input")
+  }
+}
 
+const messageSendButtonClick = () => {
+  inputMessageForm.style.display = "none";
+  confirmationForm.style.display = "flex";
+  inputConfirmationLabel.innerHTML = "Thank you, " + inputName.value + ".";
+}
 
+nameNextButton[0].addEventListener("click", nameNextButtonClick);
+nameNextButton[1].addEventListener("click", nameNextButtonClick);
 
+emailNextButton[0].addEventListener("click", emailNextButtonClick);
+emailNextButton[1].addEventListener("click", emailNextButtonClick);
 
+messageSendButton[0].addEventListener("click", messageSendButtonClick);
+messageSendButton[1].addEventListener("click", messageSendButtonClick);
 
-
-});
-
-emailBackArrow.addEventListener("click", () => {
+emailBackArrow[0].addEventListener("click", () => {
   inputEmailForm.style.display = "none";
   inputNameForm.style.display = "flex";
 });
 
-messageSendButton.addEventListener("click", () => {
-  inputMessageForm.style.display = "none";
-  confirmationForm.style.display = "flex";
-  inputConfirmationLabel.innerHTML = "Thank you, " + inputName.value + ".";
+emailBackArrow[1].addEventListener("click", () => {
+  inputEmailForm.style.display = "none";
+  inputNameForm.style.display = "flex";
 });
 
-messageBackArrow.addEventListener("click", () => {
+
+messageBackArrow[0].addEventListener("click", () => {
   inputEmailForm.style.display = "flex";
   inputMessageForm.style.display = "none";
 });
 
-confirmationCloseButton.addEventListener("click", () => {
+messageBackArrow[1].addEventListener("click", () => {
+  inputEmailForm.style.display = "flex";
+  inputMessageForm.style.display = "none";
+});
+
+confirmationCloseButton[0].addEventListener("click", () => {
+  ctaSection.classList.add('hidden');
+});
+
+confirmationCloseButton[1].addEventListener("click", () => {
   ctaSection.classList.add('hidden');
 });
 

@@ -1199,7 +1199,31 @@ footer .resume-button:hover {
     transition: all ease 0.5s;
 }
 
-.cta__form-actions .form-action__page-numbers {
+.cta__form .cta__form-actions-mobile {
+    width: 100%;
+    display: none;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+    box-sizing: content-box;
+    padding-top: 160px;
+}
+
+.cta__form .cta__form-actions-mobile .image-container {
+    margin: 0;
+    width: 35px;
+    height: 35px;
+}
+
+.cta__form .cta__form-actions-mobile img:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+    transition: all ease 0.5s;
+}
+
+.cta__form .form-action__page-numbers {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1210,13 +1234,36 @@ footer .resume-button:hover {
 
 .form-action__page-numbers p {
     padding: 0 10px;
-    font-size: Gotham Book;
+    font-family: Gotham Book;
     font-size: 18px;
     line-height: 21.6px;
     color: rgba(255, 255, 255, 0.24);
 }
 
 .form-action__page-numbers .page_selected {
+    color: #FFF;
+}
+
+.cta__form .form-action__page-numbers-mobile {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+    margin-left: 0;
+    padding-top: 20px;
+    display: none;
+    width: 33%;
+    align-self: center;
+}
+
+.form-action__page-numbers-mobile p {
+    font-family: Gotham Book;
+    font-size: 18px;
+    line-height: 21.6px;
+    color: rgba(255, 255, 255, 0.24);
+}
+
+.form-action__page-numbers-mobile .page_selected {
     color: #FFF;
 }
 
@@ -1239,6 +1286,30 @@ footer .resume-button:hover {
 }
 
 .cta__form-actions button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all ease 0.5s;
+}
+
+.cta__form-actions-mobile button {
+    background-color: #000;
+    color: #FFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    width: 161px;
+    height: 48px;
+    font-family: Gotham Book;
+    font-size: 18px;
+    line-height: 22px;
+    border-radius: 4px;
+    border: none;
+    margin: 0;
+}
+
+.cta__form-actions-mobile button:hover {
     cursor: pointer;
     transform: scale(1.1);
     transition: all ease 0.5s;
@@ -1284,6 +1355,9 @@ footer .resume-button:hover {
 /* Responsive Desing Tablet*/
 
 @media screen and (max-width: 800px) {
+    .main-nav__item a {
+        padding: 0 10px;
+    }
     /* Cover Tablet */
     .cover__pretitle {
         font-size: 1.2rem;
@@ -1798,5 +1872,41 @@ footer .resume-button:hover {
     }
     footer .footer__logos-container i {
         font-size: 28px;
+    }
+    /* CTA Mobile */
+    .cta__form label {
+        font-size: 18px;
+        line-height: 17px;
+    }
+    .cta__form input {
+        font-size: 32px;
+        line-height: 96%;
+        padding-left: 0;
+        width: 94%;
+    }
+    .cta__form .cta__form-actions-mobile {
+        display: flex;
+    }
+    .cta__form .form-action__page-numbers-mobile {
+        display: flex;
+    }
+    .cta__form .cta__form-actions {
+        display: none;
+    }
+    .required-message {
+        font-family: Gotham Book;
+        font-size: 12px;
+        color: red;
+        text-align: left;
+        margin: 0;
+        padding-top: 5px;
+        display: none;
+    }
+    .required-input {
+        border-bottom: 1px solid red !important;
+    }
+    .confirmation-message {
+        font-size: 32px;
+        line-height: 30px;
     }
 }
