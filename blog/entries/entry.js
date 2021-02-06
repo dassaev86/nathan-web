@@ -27,13 +27,13 @@ size.addListener(hideMobileNav) // Attach listener function on state changes
 
 let toggleMenu = (open) => {
   if (open) {
-    mainHeader.style.height = "65%";
-    mobileNav.style.display = "inline-block"
-    mobileCta.style.display = "inline-block"
+    mainHeader.style.height = "100%";
+    mobileNav.style.visibility = "visible";
+    mobileCta.style.visibility = "visible";
   } else {
-    mainHeader.style.height = "auto";
-    mobileNav.style.display = "none";
-    mobileCta.style.display = "none";
+    mainHeader.style.height = "83px";
+    mobileNav.style.visibility = "hidden";
+    mobileCta.style.visibility = "hidden";
   }
 }
 
@@ -45,14 +45,37 @@ menuButton.addEventListener("click", () => {
 
 
 
-jQuery(window).on("load scroll", function () {
+// jQuery(window).on("load scroll", function () {
    
-    let scroll = $(window).scrollTop();
-    console.log("Scroll: ", scroll)
-    if (scroll < 2) {
-      $(".main-header").removeClass("sticky");
-    } else {
-      $(".main-header").addClass("sticky");
-    }
+//     let scroll = $(window).scrollTop();
+//     console.log("Scroll: ", scroll)
+//     if (scroll < 2) {
+//       $(".main-header").removeClass("sticky");
+//     } else {
+//       $(".main-header").addClass("sticky");
+//     }
+
+//   });
+
+
+var scrollableElement = document.body; //document.getElementById('scrollableElement');
+
+scrollableElement.addEventListener('wheel', checkScrollDirection);
+
+function checkScrollDirection(event) {
+  if (checkScrollDirectionIsUp(event)) {
+    $(".main-header").addClass("sticky");
+  } else {
+    $(".main-header").removeClass("sticky");
+  }
+}
+
+function checkScrollDirectionIsUp(event) {
+  if (event.wheelDelta) {
+    return event.wheelDelta > 0;
+  }
+  return event.deltaY < 0;
+}
+
+  
     
-  });

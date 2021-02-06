@@ -28,13 +28,13 @@ size.addListener(hideMobileNav) // Attach listener function on state changes
 
 let toggleMenu = (open) => {
   if (open) {
-    mainHeader.style.height = "70%";
-    mobileNav.style.display = "inline-block"
-    mobileCta.style.display = "inline-block"
+    mainHeader.style.height = "100%";
+    mobileNav.style.visibility = "visible";
+    mobileCta.style.visibility = "visible";
   } else {
-    mainHeader.style.height = "auto";
-    mobileNav.style.display = "none";
-    mobileCta.style.display = "none";
+    mainHeader.style.height = "83px";
+    mobileNav.style.visibility = "hidden";
+    mobileCta.style.visibility = "hidden";
   }
 }
 
