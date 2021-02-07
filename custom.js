@@ -122,7 +122,6 @@ jQuery(window).on("load scroll", function () {
   // $(".preloader-area").delay(350).fadeOut("slow");
  
   let scroll = $(window).scrollTop();
-  console.log("Scroll: ", scroll)
   if (scroll < 2) {
     $(".main-header").removeClass("sticky");
   } else {
@@ -331,8 +330,38 @@ confirmationCloseButton[1].addEventListener("click", () => {
 });
 
 
+// Scroll Magin Animations
+
+var tl = new TimelineMax({onUpdate:updatePercentage});
+const controller = new ScrollMagic.Controller();
 
 
+tl.from('.role5', .5, {x:-200, opacity: 0}, "=-6");
+tl.from('.hat5', .5, {y:-200, opacity: 0}, "=-6");
+tl.from('.role1', .5,{x:-200, opacity: 0}, "=-4");
+tl.from('.hat1', .5, {y:-200, opacity: 0}, "=-4");
+tl.from('.role2', .5, {x:-200, opacity: 0}, "=-3");
+tl.from('.hat2', .5, {y:-200, opacity: 0}, "=-3");
+tl.from('.role3', .5, {x:-200, opacity: 0}, "=-2");
+tl.from('.hat3', .5, {y:-200, opacity: 0}, "=-2");
+tl.from('.role4', .5, {x:-200, opacity: 0}, "=-1");
+tl.from('.hat4', .5, {y:-200, opacity: 0}, "=-1");
+
+
+const scene = new ScrollMagic.Scene({
+  triggerElement: ".roles",
+            triggerHook: "onLeave",
+            duration: "200%"
+})
+  .setPin(".roles")
+  .setTween(tl)
+    .addTo(controller);
+    
+    function updatePercentage() {
+      //percent.innerHTML = (tl.progress() *100 ).toFixed();
+      tl.progress();
+      console.log(tl.progress());
+    }
 
 
 

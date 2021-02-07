@@ -15,6 +15,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <!-- Scroll Magic Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
 </head>
 
 <body>
@@ -280,24 +286,32 @@
             <div class="roles-info">
                 <h1>Roles I've held</h1>
                 <div class="roles__divisor"></div>
-                <ul class="roles__list">
+                <!-- <ul class="roles__list">
                     <li data-aos="fade-right" data-aos-offset="150"><i class="fas fa-check"></i>Sales</li>
                     <li data-aos="fade-right" data-aos-offset="280"><i class="fas fa-check"></i>Product Owner</li>
                     <li data-aos="fade-right" data-aos-offset="360"><i class="fas fa-check"></i>Content Creation</li>
                     <li data-aos="fade-right" data-aos-offset="440"><i class="fas fa-check"></i>Copywriting</li>
                     <li data-aos="fade-right" data-aos-offset="520"><i class="fas fa-check"></i>Marketing</li>
+                </ul> -->
+
+                <ul class="roles__list">
+                    <li class="role1"><i class="fas fa-check"></i>Sales</li>
+                    <li class="role2"><i class="fas fa-check"></i>Product Owner</li>
+                    <li class="role3"><i class="fas fa-check"></i>Content Creation</li>
+                    <li class="role4"><i class="fas fa-check"></i>Copywriting</li>
+                    <li class="role5"><i class="fas fa-check"></i>Marketing</li>
                 </ul>
 
                 <ul class="roles__list-mobile">
-                    <li data-aos="fade-right" data-aos-offset="200" data-aos-delay="0" data-aos-duration="2000"><i class="fas fa-check"></i>Sales</li>
-                    <li data-aos="fade-right" data-aos-offset="200" data-aos-delay="700" data-aos-duration="2000"><i class="fas fa-check"></i>Product Owner</li>
-                    <li data-aos="fade-right" data-aos-offset="200" data-aos-delay="1400" data-aos-duration="2000"><i class="fas fa-check"></i>Content Creation</li>
-                    <li data-aos="fade-right" data-aos-offset="200" data-aos-delay="2100" data-aos-duration="2000"><i class="fas fa-check"></i>Copywriting</li>
-                    <li data-aos="fade-right" data-aos-offset="200" data-aos-delay="2800" data-aos-duration="2000"><i class="fas fa-check"></i>Marketing</li>
+                    <li class="role1"><i class="fas fa-check"></i>Sales</li>
+                    <li class="role2"><i class="fas fa-check"></i>Product Owner</li>
+                    <li class="role3"><i class="fas fa-check"></i>Content Creation</li>
+                    <li class="role4"><i class="fas fa-check"></i>Copywriting</li>
+                    <li class="role5"><i class="fas fa-check"></i>Marketing</li>
                 </ul>
             </div>
 
-
+            <!-- 
             <div class="roles__hats-container ">
                 <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000" data-aos-delay="0" data-aos-offset="200"><img src="./assets/hat1.png " alt=" "></div>
                 <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000" data-aos-delay="0" data-aos-offset="400"><img src="./assets/hat2.png " alt=" "></div>
@@ -305,15 +319,24 @@
                 <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000" data-aos-delay="0" data-aos-offset="700"><img src="./assets/hat4.png " alt=" "></div>
                 <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000" data-aos-delay="0" data-aos-offset="900"><img src="./assets/hat5.png " alt=" "></div>
                 <div data-aos="fade-up " data-aos-duration="3000 "><img src="./assets/nathan-roles.png " alt="Nathan-Roles "></div>
+            </div> -->
+
+            <div class="roles__hats-container">
+                <div class="hat1"><img style="width: 280px;" src="./assets/hat1.png " alt="Hat1"></div>
+                <div class="hat2"><img style="width: 280px;" src="./assets/hat2.png " alt="Hat2"></div>
+                <div class="hat3"><img style="width: 280px;" src="./assets/hat3.png " alt="Hat3"></div>
+                <div class="hat4"><img style="width: 280px;" src="./assets/hat4.png " alt="Hat4"></div>
+                <div class="hat5"><img style="width: 280px;" src="./assets/hat5.png " alt="Hat5"></div>
+                <div><img style="width: 280px;" src="./assets/nathan-roles.png " alt="Nathan-Roles "></div>
             </div>
 
             <div class="roles__hats-container-mobile">
-                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000" data-aos-delay="0" data-aos-offset="200"><img src="./assets/mob-hat1.png" alt=" "></div>
-                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000" data-aos-delay="700" data-aos-offset="200"><img src="./assets/mob-hat2.png " alt=" "></div>
-                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000" data-aos-delay="1400" data-aos-offset="200"><img src="./assets/mob-hat3.png " alt=" "></div>
-                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000" data-aos-delay="2100" data-aos-offset="200"><img src="./assets/mob-hat4.png " alt=" "></div>
-                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000" data-aos-delay="2800" data-aos-offset="200"><img src="./assets/mob-hat5.png " alt=" "></div>
-                <div data-aos="fade-up " data-aos-duration="3000 "><img src="./assets/nathan-roles.png " alt="Nathan-Roles "></div>
+                <div class="hat1"><img src="./assets/mob-hat1.png" alt=" "></div>
+                <div class="hat2"><img src="./assets/mob-hat2.png " alt=" "></div>
+                <div class="hat3"><img src="./assets/mob-hat3.png " alt=" "></div>
+                <div class="hat4"><img src="./assets/mob-hat4.png " alt=" "></div>
+                <div class="hat5"><img src="./assets/mob-hat5.png " alt=" "></div>
+                <div><img src="./assets/nathan-roles.png " alt="Nathan-Roles "></div>
             </div>
 
         </div>
