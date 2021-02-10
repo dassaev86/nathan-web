@@ -9,7 +9,12 @@ let dots = document.querySelectorAll(".dot");
 let phraseContainer = document.querySelector(".about__phrase-container");
 let currentPhrase = 0;
 
-
+$("#talk").animatedModal({
+   animatedIn:'zoomIn',
+   animatedOut:'zoomOut',
+   color:'#51ac6b',
+   animationDuration:.8,
+    });
 
 let hideMobileNav = (size) => {
   if (!size.matches) { // If media query matches
@@ -246,7 +251,7 @@ let requiredMessageEmail = document.querySelector("#input-email .required-messag
 
 
 
-
+/*
 ctaButton.addEventListener("click", () => {
   ctaSection.classList.remove('hidden');
 });
@@ -257,7 +262,8 @@ mobileCta.addEventListener("click", () => {
 
 closeModal.addEventListener("click", () => {
   ctaSection.classList.add('hidden');
-});
+});*/
+
 
 
 const nameNextButtonClick = () => {
@@ -336,16 +342,31 @@ var tl = new TimelineMax({onUpdate:updatePercentage});
 const controller = new ScrollMagic.Controller();
 
 
-tl.from('.role5', .5, {x:-200, opacity: 0}, "=-6");
+tl.from('.role5', .5, {opacity: 0.3}, "=-6");
 tl.from('.hat5', .5, {y:-200, opacity: 0}, "=-6");
-tl.from('.role1', .5,{x:-200, opacity: 0}, "=-4");
+// tl.from('#check5', .5, {opacity: 0}, "=-6");
+
+
+tl.from('.role1', .5,{opacity: 0.3}, "=-4");
 tl.from('.hat1', .5, {y:-200, opacity: 0}, "=-4");
-tl.from('.role2', .5, {x:-200, opacity: 0}, "=-3");
+// tl.from('#check1', .5, {opacity: 0}, "=-4");
+
+
+tl.from('.role2', .5, {opacity: 0.3}, "=-3");
 tl.from('.hat2', .5, {y:-200, opacity: 0}, "=-3");
-tl.from('.role3', .5, {x:-200, opacity: 0}, "=-2");
+// tl.from('#check2', .5, {opacity: 0}, "=-3");
+
+
+tl.from('.role3', .5, {opacity: 0.3}, "=-2");
 tl.from('.hat3', .5, {y:-200, opacity: 0}, "=-2");
-tl.from('.role4', .5, {x:-200, opacity: 0}, "=-1");
+// tl.from('#check3', .5, {opacity: 0}, "=-2");
+
+
+tl.from('.role4', .5, {opacity: 0.3}, "=-1");
 tl.from('.hat4', .5, {y:-200, opacity: 0}, "=-1");
+// tl.from('#check4', .5, {opacity: 0}, "=-1");
+
+
 
 
 const scene = new ScrollMagic.Scene({
