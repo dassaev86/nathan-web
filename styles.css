@@ -633,17 +633,28 @@ body {
     padding-bottom: 6rem;
 }
 
-.service-card {
+.card-wrapper {
     width: 28%;
-    height: 270px;
+    height: 285px;
+    margin: 20px;
+}
+
+.service-card {
+    width: 100%;
+    height: 100%;
     background-color: #fff;
     box-sizing: border-box;
-    margin: 20px;
     display: flex;
     justify-items: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 1.5rem;
+}
+
+.slider__services .service-card {
+    width: 100%;
+    height: 220px;
+    margin: 20px;
 }
 
 .service-card .service-card__title {
@@ -664,7 +675,7 @@ body {
     line-height: 28.8px;
 }
 
-.service-card:hover {
+.services .service-card:hover {
     transform: scale(1.15);
     transition: all ease 0.5s;
 }
@@ -884,9 +895,8 @@ body {
 }
 
 .work-card {
-    width: 28%;
-    /* max-width: 450px; */
-    height: 300px;
+    width: 100%;
+    height: 100%;
     background-color: #fff;
     box-sizing: border-box;
     margin: 20px;
@@ -1583,9 +1593,14 @@ footer .resume-button:hover {
         bottom: 30px;
     }
     /* Services Section Tablet */
-    .service-card {
+    .card-wrapper {
         width: 40%;
-        height: 220px;
+        height: 260px;
+    }
+
+    .service-card {
+        width: 100%;
+        height: 100%;
     }
     .service-card .service-card__title {
         font-size: 2rem;
@@ -1627,8 +1642,8 @@ footer .resume-button:hover {
         /* line-height: 24px; */
     }
     .work-card {
-        width: 40%;
-        height: 300px;
+        width: 100%;
+        height: 100%;
     }
     .work .see-more-button {
         padding: 0.4rem 2rem;
@@ -1722,17 +1737,29 @@ footer .resume-button:hover {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 200px;
+        height: 230px;
         margin-right: 0;
     }
     .slick-list {
         position: absolute;
-        top: -140px;
+        top: -155px;
         left: 0;
     }
     .quote-container {
         padding: 1rem;
     }
+
+    .item-inner .quote-container__quote {
+        font-size: 14px;
+        line-height: 20px;
+
+    }
+    
+    .item-inner .quote-container__quotee {
+        font-size: 14px;
+        font-family: Gotham Bolded;
+    }
+
     .slick-dots {
         position: absolute;
         top: 135px;
@@ -1884,8 +1911,9 @@ footer .resume-button:hover {
         left: 5%;
     }
     .roles__container .roles-info h1 {
-        width: 60%;
-        font-size: 48px;
+        width: 65%;
+        font-size: 40px;
+        line-height: 40px;
         margin-bottom: 5px;
     }
     .roles__divisor {
@@ -1898,8 +1926,9 @@ footer .resume-button:hover {
         padding-left: 0;
     }
     .roles__container .roles-info ul li {
-        font-size: 20px;
-        line-height: 60px;
+        font-family: "Playfair Display", serif;;
+        font-size: 18px;
+        line-height: 54px;
         margin-right: 50px;
     }
     .roles__container .roles-info ul li i {
@@ -1907,7 +1936,7 @@ footer .resume-button:hover {
     }
     .roles__hats-container-mobile {
         position: absolute;
-        top: 8%;
+        top: 17%;
         right: 1%;
         width: 150px;
         height: 600px;
@@ -1916,48 +1945,48 @@ footer .resume-button:hover {
     }
     .roles__hats-container-mobile div:nth-child(1) {
         position: absolute;
-        bottom: 49%;
+        bottom: 70.5%;
         right: 0;
         z-index: 11;
         /* display: none; */
     }
     .roles__hats-container-mobile div:nth-child(2) {
         position: absolute;
-        bottom: 52%;
+        bottom: 74.5%;
         right: 0;
         z-index: 11;
         /* display: none; */
     }
     .roles__hats-container-mobile div:nth-child(3) {
         position: absolute;
-        bottom: 56%;
+        bottom: 81.5%;
         right: 0;
         z-index: 11;
         /* display: none; */
     }
     .roles__hats-container-mobile div:nth-child(4) {
         position: absolute;
-        bottom: 57%;
+        bottom: 83.5%;
         right: 0;
         z-index: 11;
         /* display: none; */
     }
     .roles__hats-container-mobile div:nth-child(5) {
         position: absolute;
-        bottom: 60%;
+        bottom: 87%;
         right: 0;
         z-index: 11;
         /* display: none; */
     }
     .roles__hats-container-mobile div:nth-child(6) {
         position: absolute;
-        bottom: 35%;
+        bottom: 49%;
         right: 0;
         z-index: 10;
         /* display: none; */
     }
     .roles__hats-container-mobile img {
-        width: 150px;
+        width: 230px;
     }
     .roles__list {
         display: none;
@@ -1969,7 +1998,8 @@ footer .resume-button:hover {
     .work__title {
         margin-left: 10%;
         width: 50%;
-        line-height: 36px;
+        font-size: 40px;
+        line-height: 40px;
     }
     .work__division {
         display: block;
@@ -1978,8 +2008,15 @@ footer .resume-button:hover {
     .work__menu-container {
         display: none;
     }
-    .work-card {
+
+    .card-wrapper {
         width: 80%;
+        height: 260px;
+    }
+    .work-card {
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
     }
     .work__menu-mobile-container {
         display: block;

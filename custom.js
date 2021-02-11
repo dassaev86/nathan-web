@@ -372,7 +372,7 @@ tl.from('.hat4', .5, {y:-200, opacity: 0}, "=-1");
 const scene = new ScrollMagic.Scene({
   triggerElement: ".roles",
             triggerHook: "onLeave",
-            duration: "200%"
+            duration: "100%"
 })
   .setPin(".roles")
   .setTween(tl)
