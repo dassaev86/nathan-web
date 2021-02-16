@@ -240,7 +240,7 @@ body {
 
 .slick-slide img {
     margin-right: 0 auto;
-    max-width: 100px;
+    max-width: 147px;
     vertical-align: middle;
 }
 
@@ -362,27 +362,27 @@ body {
 /* About Section */
 
 .about {
-    height: 70rem;
+    height: 57rem;
     background-color: #fff;
     position: relative;
-    background-image: url("./assets/nathan-about.png");
+    background-image: url("./assets/nathan-about2.png");
     background-repeat: no-repeat;
-    background-size: 674px 674px;
-    background-position: 1% 125%;
+    background-size: 500px 535px;
+    background-position: 6% 127%;
     z-index: 100;
 }
 
 .about__presentation {
-    width: 25%;
+    width: 32%;
     position: absolute;
     left: 10%;
-    top: 23%;
+    top: 31%;
 }
 
 .about__presentation h1 {
     font-family: "Playfair Display", serif;
-    font-size: 4rem;
-    line-height: 4rem;
+    font-size: 2.5rem;
+    line-height: 56px;
     font-weight: 700;
 }
 
@@ -394,8 +394,8 @@ body {
 
 .about__presentation h3 {
     font-family: "Playfair Display", serif;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 18px;
+    line-height: 28px;
     font-weight: 700;
     width: 75%;
     margin-left: 0;
@@ -414,10 +414,10 @@ body {
 
 .about .about__textbox-white {
     position: absolute;
-    top: 26%;
+    top: 33%;
     left: 36%;
     width: 58%;
-    height: 32%;
+    height: 37%;
     z-index: 50;
 }
 
@@ -427,10 +427,10 @@ body {
 
 .about .about__textbox-black {
     position: absolute;
-    top: 27.5%;
+    top: 34.5%;
     left: 36.5%;
     width: 58%;
-    height: 32%;
+    height: 37%;
     z-index: 49;
 }
 
@@ -440,10 +440,10 @@ body {
 
 .about__phrase-container {
     position: absolute;
-    top: 26%;
+    top: 33%;
     left: 36%;
     width: 58%;
-    height: 32%;
+    height: 37%;
     z-index: 51;
     display: flex;
     justify-content: center;
@@ -482,7 +482,7 @@ body {
     justify-content: space-around;
     align-items: center;
     position: absolute;
-    top: 64%;
+    top: 73%;
     left: 36%;
     z-index: 60;
 }
@@ -814,10 +814,10 @@ body {
 }
 
 .roles__container .roles-info ul li {
-    font-family: Gotham Book;
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 46px;
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 56px;
     list-style: none;
 }
 
@@ -836,6 +836,7 @@ body {
 .work {
     background-color: #fff;
     position: relative;
+    margin-top: 100px;
 }
 
 .work-container {
@@ -1376,20 +1377,38 @@ footer .resume-button:hover {
 
 @media screen and (max-width: 1200px) {
     .about {
-        background-position: -10% 120%;
-        background-size: 620px 620px;
+        background-position: 5% 120%;
+        background-size: 450px 485px;
+    }
+    .about__presentation {
+        top: 36%;
+    }
+    .about__presentation h3 {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        width: 80%;
     }
     .about .about__textbox-white {
-        width: 60%;
-        height: 35%;
+        top: 38%;
+        width: 58%;
+        height: 34%;
+        left: 40%;
     }
     .about .about__textbox-black {
-        width: 60%;
-        height: 35%;
+        top: 39.5%;
+        width: 58%;
+        height: 34%;
+        left: 40.5%;
     }
     .about__phrase-container {
-        width: 60%;
-        height: 35%;
+        top: 38%;
+        width: 58%;
+        height: 34%;
+        left: 40%;
+    }
+    .dots-container {
+        left: 40%;
+        top: 74%;
     }
     .roles__container .roles-info {
         left: 15%;
@@ -1397,11 +1416,7 @@ footer .resume-button:hover {
     .roles__hats-container {
         right: 15%;
     }
-    .about__presentation h3 {
-        font-size: 1.2rem;
-        line-height: 1.5rem;
-        width: 80%;
-    }
+
     .work__title {
         margin-left: 4%;
     }
@@ -1412,24 +1427,24 @@ footer .resume-button:hover {
 
 @media screen and (max-width: 1024px) {
     .about {
-        background-position: -15% 120%;
-        background-size: 590px 590px;
-        height: 62rem;
+        background-position: -1% 129%;
+        background-size: 450px 485px;
+        height: 50rem;
     }
     .about .about__textbox-white {
-        width: 60%;
-        height: 30%;
-        top: 26%
+        width: 58%;
+        height: 35%;
+        top: 34%
     }
     .about .about__textbox-black {
-        width: 60%;
-        height: 30%;
-        top: 27%
+        width: 58%;
+        height: 35%;
+        top: 35.5%
     }
     .about__phrase-container {
-        width: 60%;
-        height: 30%;
-        top: 26%
+        width: 58%;
+        height: 35%;
+        top: 34%
     }
     .roles__container .roles-info {
         left: 10%;
@@ -1437,27 +1452,28 @@ footer .resume-button:hover {
     .roles__hats-container {
         right: 10%;
     }
-    .dots-container {
-        top: 68%
-    }
     .about__presentation {
-        top: 23%;
+        top: 32%;
     }
     .about__presentation h1 {
-        font-size: 3rem;
-        line-height: 3rem;
+        font-size: 2rem;
+        line-height: 40px;
     }
     .about__presentation h3 {
-        font-size: 1.2rem;
-        line-height: 1.5rem;
+        font-size: 16px;
+        line-height: 20px;
         width: 80%;
     }
     .about .about__phrase {
         font-size: 20px;
         line-height: 36px;
     }
+
+    .about_arrow {
+        width: 30px;
+    }
     .dots-container {
-        top: 60%
+        top: 71%
     }
     .work__title {
         margin-left: 4%;
@@ -1469,36 +1485,44 @@ footer .resume-button:hover {
 
 @media screen and (max-width: 900px) {
     .about {
-        background-position: -15% 113%;
-        background-size: 500px 500px;
-        height: 57rem;
+        background-position: -1% 125%;
+        background-size: 400px 435px;
+        height: 47rem;
     }
     .about .about__textbox-white {
-        top: 27%;
-        height: 33%;
+        top: 34%;
+        height: 35%;
     }
     .about .about__textbox-black {
-        top: 28%;
-        height: 33%;
+        top: 35%;
+        height: 35%;
     }
     .about__phrase-container {
-        top: 27%;
-        height: 33%;
+        top: 34%;
+        height: 35%;
     }
     .dots-container {
-        top: 63%
+        top: 71%
     }
     .about__presentation {
-        top: 24%;
+        top: 32%;
+    }
+    .about__presentation h1 {
+        font-size: 2rem;
+        line-height: 40px;
     }
     .about__presentation h3 {
-        font-size: 1.2rem;
-        line-height: 1.5rem;
-        width: 100%;
+        font-size: 16px;
+        line-height: 20px;
+        width: 80%;
     }
     .about .about__phrase {
         font-size: 18px;
         line-height: 30px;
+    }
+
+    .about_arrow {
+        width: 25px;
     }
     .work__title {
         margin-left: 3.5%;
@@ -1571,40 +1595,40 @@ footer .resume-button:hover {
     }
     /* About Tablet */
     .about {
-        background-size: 400px 400px;
-        background-position: -5% 113%;
-        height: 45rem;
+        background-position: -3% 130%;
+        background-size: 370px 395px;
+        height: 40rem;
     }
     .about__presentation {
-        top: 21%;
+        top: 28%;
         width: 30%;
     }
     .about__presentation h1 {
-        font-size: 2.5rem;
-        line-height: 2.5rem;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
     }
     .about__presentation h3 {
-        font-size: 18px;
-        line-height: 1.5rem;
+        font-size: 16px;
+        line-height: 20px;
         width: 100%;
     }
     .about .about__textbox-white {
-        top: 23%;
+        top: 29%;
         left: 43%;
         width: 52%;
-        height: 35%;
+        height: 38%;
     }
     .about .about__textbox-black {
-        top: 24%;
+        top: 30%;
         left: 44%;
         width: 52%;
-        height: 35%;
+        height: 38%;
     }
     .about__phrase-container {
-        top: 23%;
+        top: 29%;
         left: 43%;
         width: 52%;
-        height: 35%;
+        height: 38%;
     }
     .about .about__phrase {
         font-size: 14px;
@@ -1612,7 +1636,7 @@ footer .resume-button:hover {
     }
     .dots-container {
         height: 15px;
-        top: 62%;
+        top: 70%;
         left: 43%;
     }
     .dot {
@@ -2030,6 +2054,9 @@ footer .resume-button:hover {
         display: block;
     }
     /* Work Section Mobile */
+    .work {
+        margin-top: 0;
+    }
     .work__title {
         margin-left: 10%;
         width: 50%;
