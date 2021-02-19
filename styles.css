@@ -221,7 +221,7 @@ body {
 }
 
 .cover__subtitle {
-    font-family: Gotham;
+    font-family: Gotham Book;
     font-size: 16px;
     font-weight: 400;
     line-height: 32px;
@@ -451,7 +451,7 @@ body {
 }
 
 .about .about__phrase {
-    text-align: justify;
+    text-align: left;
     padding: 2rem;
     vertical-align: middle;
     box-sizing: border-box;
@@ -821,9 +821,10 @@ body {
     list-style: none;
 }
 
-.roles__container .roles-info ul li i {
+.roles__container .roles-info ul li img {
     margin-left: -45px;
     margin-right: 10px;
+    width: 20px;
 }
 
 .role-unselected {
@@ -852,6 +853,10 @@ body {
     line-height: 72px;
     font-weight: 700;
     margin-left: 5%;
+}
+
+.br {
+    display: none;
 }
 
 .work__division {
@@ -937,7 +942,7 @@ body {
 
 .work-card img {
     width: 100%;
-    /* max-height: 200px; */
+    max-height: 192px;
 }
 
 .work-card .work-card__text-container {
@@ -1126,6 +1131,10 @@ footer .resume-button:hover {
     align-items: center;
 }
 
+.cta-section__header img {
+    width: 120px;
+}
+
 .hidden {
     display: none;
 }
@@ -1179,6 +1188,8 @@ footer .resume-button:hover {
     color: #fff;
 }
 
+
+
 .cta__form textarea {
     width: 90%;
     padding: 16px;
@@ -1190,6 +1201,11 @@ footer .resume-button:hover {
     margin-left: 0;
     color: #fff;
 }
+
+.cta__form input:focus, .cta__form textarea:focus {
+    outline: none;
+}
+
 
 .required-message {
     font-family: Gotham Book;
@@ -1752,7 +1768,7 @@ footer .resume-button:hover {
     }
     /* Cover Mobile */
     .cover {
-        height: 30rem;
+        height: 544px;
     }
     .cover__text {
         text-align: center;
@@ -1760,9 +1776,8 @@ footer .resume-button:hover {
         padding: 0 2rem;
     }
     .cover__pretitle {
-        font-family: "Dancing Script", cursive;
-        font-size: 1.2rem;
-        line-height: 32px;
+        font-size: 1.5rem;
+        line-height: 48px;
     }
     .cover__title {
         font-family: "Playfair Display", serif;
@@ -1770,12 +1785,11 @@ footer .resume-button:hover {
         font-weight: bold;
         font-size: 2.5rem;
         line-height: 48px;
+        padding-bottom: 7px;
     }
     .cover__subtitle {
-        font-family: "Yanone Kaffeesatz", sans-serif;
-        font-size: 1.2rem;
-        font-weight: 300;
-        line-height: 48px;
+        font-size: 18px;
+        line-height: 28px;
     }
     /* Slider Mobile */
     .item {
@@ -1816,7 +1830,9 @@ footer .resume-button:hover {
     }
     .item-inner .quote-container__quotee {
         font-size: 14px;
+        line-height: 16px;
         font-family: Gotham Bolded;
+        text-align: left;
     }
     .slick-dots {
         position: absolute;
@@ -1884,7 +1900,7 @@ footer .resume-button:hover {
     }
     .about .about__phrase {
         padding: 0.8rem;
-        font-size: 14px;
+        font-size: 18px;
         line-height: 24px;
     }
     .dots-container {
@@ -1985,7 +2001,6 @@ footer .resume-button:hover {
     }
     .roles__container .roles-info ul li {
         font-family: "Playfair Display", serif;
-        ;
         font-size: 18px;
         line-height: 54px;
         margin-right: 50px;
@@ -2004,35 +2019,35 @@ footer .resume-button:hover {
     }
     .roles__hats-container-mobile div:nth-child(1) {
         position: absolute;
-        bottom: 70.5%;
+        bottom: 68%;
         right: 0;
         z-index: 11;
         /* display: none; */
     }
     .roles__hats-container-mobile div:nth-child(2) {
         position: absolute;
-        bottom: 74.5%;
+        bottom: 72%;
         right: 0;
         z-index: 11;
         /* display: none; */
     }
     .roles__hats-container-mobile div:nth-child(3) {
         position: absolute;
-        bottom: 81.5%;
+        bottom: 78%;
         right: 0;
         z-index: 11;
         /* display: none; */
     }
     .roles__hats-container-mobile div:nth-child(4) {
         position: absolute;
-        bottom: 83.5%;
+        bottom: 80%;
         right: 0;
         z-index: 11;
         /* display: none; */
     }
     .roles__hats-container-mobile div:nth-child(5) {
         position: absolute;
-        bottom: 87%;
+        bottom: 84%;
         right: 0;
         z-index: 11;
         /* display: none; */
@@ -2045,7 +2060,7 @@ footer .resume-button:hover {
         /* display: none; */
     }
     .roles__hats-container-mobile img {
-        width: 230px;
+        width: 200px;
     }
     .roles__list {
         display: none;
@@ -2059,9 +2074,13 @@ footer .resume-button:hover {
     }
     .work__title {
         margin-left: 10%;
-        width: 50%;
+        width: 100%;
         font-size: 40px;
         line-height: 40px;
+    }
+
+    .br {
+        display: block;
     }
     .work__division {
         display: block;
@@ -2082,6 +2101,7 @@ footer .resume-button:hover {
         width: 100%;
         height: 100%;
         margin-left: 0;
+        filter: grayscale(0%);
     }
     .work__menu-mobile-container {
         display: block;
@@ -2116,6 +2136,10 @@ footer .resume-button:hover {
         line-height: 96%;
         padding-left: 0;
         width: 94%;
+    }
+    .cta__form textarea {
+        font-size: 32px;
+        line-height: 32px;
     }
     .cta__form .cta__form-actions-mobile {
         display: flex;

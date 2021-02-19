@@ -333,6 +333,7 @@ html, body {
 
 .work-card img {
     width: 100%;
+    max-height: 192px;
 }
 
 .work-card .work-card__text-container {
