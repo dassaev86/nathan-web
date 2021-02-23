@@ -113,7 +113,7 @@ $(".slider").slick({
   arrowControls: true,
   infinite: true,
   autoplay: true,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 6000,
   prevArrow: prevSVG,
   nextArrow: nextSVG,
   responsive: [
@@ -149,7 +149,7 @@ $(".slider__services").slick({
   arrowControls: true,
   infinite: true,
   autoplay: true,
-  autoplaySpeed: 2500,
+  autoplaySpeed: 3000,
   responsive: [
     {
       breakpoint: 600,
@@ -175,6 +175,12 @@ $(".slider__services").slick({
 });
 
 
+// $(".about__phrase-container").slick({
+//   slidesToShow: 1,
+//   slidesToScroll: 1,
+// })
+
+
 jQuery(window).on("load scroll", function () {
   // "use strict"; // Start of use strict
   // // Loader
@@ -187,39 +193,6 @@ jQuery(window).on("load scroll", function () {
   } else {
     $(".main-header").addClass("sticky");
   }
-
-  // if (scroll < 1950) {
-  //   $(".roles__hats-container div:nth-child(1)").removeClass("show-hat");
-  // } else {
-  //   $(".roles__hats-container div:nth-child(1)").addClass("show-hat");
-  // }
-
-  // if (scroll < 2050) {
-  //   $(".roles__hats-container div:nth-child(2)").removeClass("show-hat");
-  // } else {
-  //   $(".roles__hats-container div:nth-child(2)").addClass("show-hat");
-  // }
-
-  // if (scroll < 2150) {
-  //   $(".roles__hats-container div:nth-child(3)").removeClass("show-hat");
-  // } else {
-  //   $(".roles__hats-container div:nth-child(3)").addClass("show-hat");
-  // }
-
-  // if (scroll < 2250) {
-  //   $(".roles__hats-container div:nth-child(4)").removeClass("show-hat");
-  // } else {
-  //   $(".roles__hats-container div:nth-child(4)").addClass("show-hat");
-  // }
-
-  // if (scroll < 2350) {
-  //   $(".roles__hats-container div:nth-child(5)").removeClass("show-hat");
-  // } else {
-  //   $(".roles__hats-container div:nth-child(5)").addClass("show-hat");
-  // }
-
-
-
 });
 
 
@@ -279,6 +252,7 @@ phraseContainer.addEventListener("click", () => {
   }
   changePhrase(currentPhrase);
 });
+
 
 
 // Call to Action Code

@@ -59,11 +59,10 @@ body {
 
 .main-header__cta {
     border: 1px solid #51ac6b;
-    border-radius: 3px;
+    border-radius: 4px;
+    box-sizing: border-box;
     background-color: transparent;
     color: #51ac6b;
-    font-size: 0.75rem;
-    /* padding: 8px 24px; */
     vertical-align: middle;
     cursor: pointer;
     font-family: Gotham Book;
@@ -135,15 +134,13 @@ body {
 }
 
 .main-header .main-header__mobile-cta {
-    border: 2px solid #51ac6b;
-    border-radius: 5px;
+    border: 1px solid #51ac6b;
+    border-radius: 4px;
     background-color: transparent;
     color: #51ac6b;
-    font-family: Gotham;
+    font-family: Gotham Book;
     font-size: 1rem;
-    font-weight: 400;
-    padding: 5px 16px;
-    vertical-align: middle;
+    padding: 16px;
     cursor: pointer;
     width: 80%;
     margin: 2rem 10%;
@@ -252,6 +249,7 @@ body {
 .slick-list.draggable {
     margin: 0 auto;
     align-self: center;
+    z-index: 2000;
 }
 
 .item-inner {
@@ -278,7 +276,7 @@ body {
 
 .item-inner .quote-container__quote {
     font-size: 16px;
-    text-align: justify;
+    text-align: left;
     font-weight: 400;
     font-family: Gotham Book;
     line-height: 24px;
@@ -289,7 +287,7 @@ body {
     font-size: 14px;
     font-family: Gotham Bolded;
     font-weight: bold;
-    line-height: 36px;
+    text-align: left;
     margin: 0;
 }
 
@@ -468,6 +466,7 @@ body {
     bottom: 40px;
     right: 25px;
     transition: all ease 0.5s;
+    z-index: 60;
 }
 
 .about_arrow:hover {
@@ -1077,26 +1076,27 @@ footer .footer__logos-container div {
     border-left: 2px solid #fff;
 }
 
-footer .button-container {
+footer form {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2rem;
 }
 
-footer .resume-button {
+footer form .resume-button {
     padding: 0.6rem 2.5rem;
     color: #fff;
     background-color: #51ac6b;
+    border: none;
     border-radius: 5px;
     font-family: Gotham Book;
     font-size: 18px;
     line-height: 22px;
-    margin-top: 2rem;
     transition: all ease 0.5s;
 }
 
-footer .resume-button:hover {
+footer form .resume-button:hover {
     background-color: #000;
     color: #FFF;
     border: 2px solid #FFF;
@@ -1796,6 +1796,10 @@ footer .resume-button:hover {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .slick-list.draggable {
+        z-index: 2000;
     }
     .slick-slide {
         width: 90vw;

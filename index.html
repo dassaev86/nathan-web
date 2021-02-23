@@ -56,7 +56,7 @@
 
         <nav class="mobile-nav">
             <ul class="mobile-nav__items">
-                <li class="mobile-nav__item">
+                <!-- <li class="mobile-nav__item">
                     <a href="#">About</a>
                 </li>
                 <li class="mobile-nav__item">
@@ -64,7 +64,7 @@
                 </li>
                 <li class="mobile-nav__item">
                     <a href="#">Work</a>
-                </li>
+                </li> -->
                 <li class="mobile-nav__item">
                     <a href="./blog/blog.html">Blog</a>
                 </li>
@@ -180,16 +180,6 @@
                 thoughts into simple ones.</p>
             <p class="about__phrase" style="display: none;">At the end of the day, humans buy from humans. My job is to make sure that the humans that you want to impact have an effortless experience in understanding the concepts you want them to.</p>
             <img class="about_arrow" src="./assets/arrow-fordward.png" alt="arrow-fordward">
-            <!-- <div class="about_arrow">
-                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="35" height="35" fill="white"/>
-                    <rect width="1440" height="5296" transform="translate(-1216 -1392)" fill="white"/>
-                    <path d="M-601.355 71.9754L-666 96.55V22.7303V-286H68V71.9101H-601H-601.184L-601.355 71.9754Z" fill="black" stroke="black" stroke-width="2"/>
-                    <path d="M-607.355 54.9754L-672 79.55V5.73035V-303H62V54.9101H-607H-607.184L-607.355 54.9754Z" fill="white" stroke="black" stroke-width="2"/>
-                    <circle cx="17.5" cy="17.5" r="17.5" fill="black"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9911 10.1765C14.7589 9.93504 14.397 9.94216 14.1726 10.1927C13.9482 10.4432 13.9418 10.8471 14.1582 11.1062L20.4442 18.1228L14.1582 24.8938C13.9418 25.1529 13.9482 25.5568 14.1726 25.8073C14.397 26.0578 14.7589 26.065 14.9911 25.8235L22 18.1228L14.9911 10.1765Z" fill="#51AC6B"/>
-                    </svg>
-            </div> -->
         </div>
         <div class="dots-container" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="0">
             <div class="dot selected"></div>
@@ -460,11 +450,11 @@
             <a href="mailto: hello@nathanmengler.com"><i class="fas fa-envelope "></i></a>
         </div>
 
-        <div class="button-container ">
-            <form action="https://docs.google.com/document/d/1YmwmE0Op0Dd2Gqi5oUGstZzpDXCRUW1GqtJ8FFkiTmk/edit?usp=sharing" target="_blank">
-                <input type="submit" class="resume-button" value="Download resume">
-            </form>
-        </div>
+
+        <form action="https://docs.google.com/document/d/1YmwmE0Op0Dd2Gqi5oUGstZzpDXCRUW1GqtJ8FFkiTmk/edit?usp=sharing" target="_blank">
+            <input type="submit" class="resume-button" value="Download resume">
+        </form>
+
 
     </footer>
 
@@ -480,7 +470,7 @@
 
         <div id="input-name" class="cta__form">
             <label for="name">I'm excited to hear from you!</label>
-            <input type="text" id="name" name="name" placeholder="Name">
+            <input type="text" id="name" name="name" placeholder="Name" autocomplete="off">
             <p class="required-message">This field is required</p>
             <!-- Mobile elements -->
             <div class="form-action__page-numbers-mobile">
@@ -508,7 +498,7 @@
 
         <div id="input-email" class="cta__form">
             <label for="email"></label>
-            <input type="email" id="email" name="email" placeholder="Email">
+            <input type="email" id="email" name="email" placeholder="Email" autocomplete="off">
             <p class="required-message">This field has to be an valid email</p>
             <!-- Mobile elements -->
             <div class="form-action__page-numbers-mobile">
