@@ -359,7 +359,7 @@ footer .footer__logos-container div {
     border-left: 2px solid #FFF;
 }
 
-footer form {
+footer .button-container {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -367,14 +367,16 @@ footer form {
     margin-top: 2rem;
 }
 
-footer form .resume-button {
+footer .resume-button {
     padding: 0.6rem 2.5rem;
     color: #fff;
-    border: none;
     background-color: #51ac6b;
+    border: none;
     border-radius: 5px;
     font-family: Gotham Book;
+    text-decoration: none;
     font-size: 18px;
+    line-height: 22px;
     transition: all ease 0.5s;
 }
 
