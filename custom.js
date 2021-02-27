@@ -289,9 +289,7 @@ mobileCta.addEventListener("click", () => {
   ctaSection.classList.remove('hidden');
 });
 
-closeModal.addEventListener("click", () => {
-  ctaSection.classList.add('hidden');
-});*/
+*/
 
 
 
@@ -326,6 +324,14 @@ const messageSendButtonClick = () => {
   inputConfirmationLabel.innerHTML = "Thank you, " + inputName.value + ".";
 }
 
+const resetForm = () => {
+  inputNameForm.style.display = "flex";
+  confirmationForm.style.display = "none";
+  inputName.value = "";
+  inputEmail.value = "";
+  inputMessage.value = "";
+}
+
 nameNextButton[0].addEventListener("click", nameNextButtonClick);
 nameNextButton[1].addEventListener("click", nameNextButtonClick);
 
@@ -356,16 +362,13 @@ messageBackArrow[1].addEventListener("click", () => {
   inputMessageForm.style.display = "none";
 });
 
-/*
-confirmationCloseButton[0].addEventListener("click", () => {
-  ctaSection.classList.add('hidden');
-});
 
-confirmationCloseButton[1].addEventListener("click", () => {
-  ctaSection.classList.add('hidden');
-});
+confirmationCloseButton[0].addEventListener("click", resetForm );
 
-*/
+confirmationCloseButton[1].addEventListener("click", resetForm);
+
+closeModal.addEventListener("click", resetForm);
+
 
 
 // Scroll Magin Animations

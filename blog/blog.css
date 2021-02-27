@@ -495,6 +495,7 @@ footer .resume-button:hover {
     cursor: pointer;
 }
 
+
 @media screen and (max-width: 800px) {
     /* Cover Tablet */
     .cover__pretitle {
@@ -620,6 +621,7 @@ footer .resume-button:hover {
     }
     .work-card {
         width: 80%;
+        filter: grayscale(0%);
     }
     .work__menu-mobile-container {
         display: block;
@@ -644,4 +646,7 @@ footer .resume-button:hover {
     footer .footer__logos-container i {
         font-size: 28px;
     }
+
+   
+    
 }

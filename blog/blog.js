@@ -57,11 +57,6 @@ let toggleMenu = (open) => {
 menuButton.addEventListener("click", () => {
   open = !open;
   toggleMenu(open);
-})
+});
 
 
-
-
-
-
-  
